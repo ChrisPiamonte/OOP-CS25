@@ -30,7 +30,7 @@ public class Group10 {
 
       if (intI == intCube1 + intCube2 + intCube3) {
         intSum += intI;
-        System.out.print  (intI + " ");
+        System.out.print(intI + " ");
       }
     }
     System.out.println("\nSum: " + intSum);
