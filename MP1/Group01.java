@@ -97,6 +97,7 @@ public class Group01 {
 
     // Addition Method
     public static void operationAdd(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+        System.out.println("ADDITION");
         System.out.print("Input first number: "); // Asks for the first number
         while (!scanner.hasNextDouble()) { // Checks for invalid input
             System.out.print("Invalid.\nInput first number: ");
@@ -118,6 +119,7 @@ public class Group01 {
 
     // Subtraction Method
     public static void operationSubtract(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+        System.out.println("SUBTRACTION");
         System.out.print("Input first number: ");
         while (!scanner.hasNextDouble()) {
             System.out.print("Invalid.\nInput first number: ");
@@ -139,6 +141,7 @@ public class Group01 {
 
     // Multiplication Method
     public static void operationMultiply(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+        System.out.println("MULTIPLICATION");
         System.out.print("Input first number: ");
         while (!scanner.hasNextDouble()) {
             System.out.print("Invalid.\nInput first number: ");
@@ -160,6 +163,7 @@ public class Group01 {
 
     // Division Method
     public static void operationDivide(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+        System.out.println("DIVISION");
         System.out.print("Input first number: ");
         while (!scanner.hasNextDouble()) {
             System.out.print("Invalid.\nInput first number: ");
@@ -189,6 +193,7 @@ public class Group01 {
 
     // Modulo Method
     public static void operationModulo(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+        System.out.println("MODULO");
         System.out.print("Input first number: ");
         while (!scanner.hasNextDouble()) {
             System.out.print("Invalid.\nInput first number: ");
@@ -218,6 +223,7 @@ public class Group01 {
 
     // Factorial Method
     public static void operationFactorial(Scanner scanner) {
+        System.out.println("FACTORIAL");
         long longFactorial, longResult = 1;
         
         while (true) { // Handles an edge case: if the input is negative
@@ -246,6 +252,7 @@ public class Group01 {
 
     // Power Method
     public static void operationPower(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+        System.out.println("POWER");
         System.out.print("Input the base: ");
         while (!scanner.hasNextDouble()) {
             System.out.print("Invalid.\nInput the base: ");
