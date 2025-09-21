@@ -101,10 +101,10 @@ public class Group01 {
         System.out.print("Input first number: "); // Asks for the first number
         while (!scanner.hasNextDouble()) { // Checks for invalid input
             System.out.print("Invalid.\nInput first number: ");
-            scanner.nextLine();
+            scanner.nextLine(); // Consumes invalid input
         }
         dblFirstValue = scanner.nextDouble();
-        scanner.nextLine();
+        scanner.nextLine(); // Consume leftover newline 
 
         System.out.print("Input second number: "); // Asks for the second number
         while (!scanner.hasNextDouble()) {
@@ -273,13 +273,13 @@ public class Group01 {
         int intResult = 0;
         double dblDecimal;
 
-        if (dblSecondValue >= 0) { // Handles an edge case: if exponent is negative
+        if (dblSecondValue >= 0) {
             for (int i = 0; i < dblSecondValue; i++) {
                 dblResult *= dblFirstValue;
             }
             
-            System.out.printf("%.1f ^ %.1f = %.1f\n", dblFirstValue, dblSecondValue, dblResult);
-        } else {
+            System.out.printf("%.1f ^ %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, dblResult);
+        } else { // Handles an edge case: if exponent is negative
             for (int i = 0; i < (-dblSecondValue); i++) {
                 dblResult *= dblFirstValue;
                 intResult = (int) dblResult; // Typecast double into int
