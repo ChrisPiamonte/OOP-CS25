@@ -68,43 +68,47 @@ public class Group01 {
       default: 
         System.out.println("Invalid choice. Please enter a valid number from 1-8"); // Error handling
         break;
-    }
+	}
 
     // Not handling errors as of the moment such as inputting newline
     // Only applicable for addition, subtraction, multiplication, & division
-    public static void operationAdd(Scanner scanner) {
-      System.out.println("Type numbers to add (Press Enter if done)"); // Need to find a way that when user enter a newline it will stop the loop
+	public static void operationAdd(Scanner scanner) {
+		System.out.println("Type numbers to add (Press Enter if done)"); // Need to find a way that when user enter a newline it will stop the loop
 
-      double dblTotalSum = 0;
-      int intCounter = 0;
+		double dblTotalSum = 0;
+		/* Only apply this in the dividing operator method
+  		int intCounter = 0;
+		*/
 
-      while (true) {
+    	while (true) {
         System.out.print("Enter a number: ");
         if (scanner.hasNextDouble()) { 
-		      // Checks if the input is a valid double
-          double dblGetNumber = scanner.nextDouble();
+			// Checks if the input is a valid double
+        	double dblGetNumber = scanner.nextDouble();
 
-		      // Iterates each inputted number
-          dblTotalSum += dblGetNumber;
-          // Counting to locate the position of the number of inputs
-          counter++;
+			// Iterates each inputted number
+        	dblTotalSum += dblGetNumber;
 		
-		      /* Only apply this in the dividing operator method
-          // If the divisor is equal to zero then it prints undefined
-          if(intCounter >= 2 && dblGetNumber == 0) {
-            System.out.println("Zero is not a valid number. It is undefine.");
-            break;
-          } 
-          */
-        }
-        else {
-          System.out.println("Invalid input. Please try again.");
-          break;
-        }
-      }
-      scanner.close();
-      System.out.println("Total sum is: " + dblTotalSum); // Need to work on how to not print it if result is undefined
-      // Suggestion, could be transform into a do while loop
-    }
-  }
+			/* Only apply this in the dividing operator method
+
+   			// Counting to locate the position of the number of inputs
+        	counter++;
+		 
+        	// If the divisor is equal to zero then it prints undefined
+        	if(intCounter >= 2 && dblGetNumber == 0) {
+        		System.out.println("Zero is not a valid number. It is undefine.");
+        		break;
+    		} 
+        	*/
+		}
+    	else {
+        	System.out.println("Invalid input. Please try again.");
+        	break;
+    		}
+    	}
+    	scanner.close();
+    	System.out.println("Total sum is: " + dblTotalSum); // Need to work on how to not print it if result is undefined
+    	// Suggestion, could be transform into a do while loop
+		}
+	}
 }
