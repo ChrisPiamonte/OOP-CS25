@@ -31,5 +31,15 @@ public class Group01 {
             System.out.println("8. EXIT");
             System.out.print("Enter your choice here: ");
             intChoice = scanner.nextInt();
+          switch (intChoice) {
+            case 1: operationAdd(scanner); break;
+            case 2: operationSubtract(scanner); break;
+            case 3: operationMultiply(scanner); break; 
+            case 4: operationDivide(scanner); break;
+            case 5: operationModulo(scanner); break;
+            case 6: operationFactorial(scanner); break;
+            case 7: operationPower(scanner); break;
+            case 8: System.out.println("Exiting Calculator... Goodbye!"); break;
+            default: System.out.println("Invalid choice. Please enter a valid number from 1-8");
   }
 }
