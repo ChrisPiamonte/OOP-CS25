@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /*
  * ==========================================================
  *  Machine Problem 1 - Workspace for Group 01
@@ -12,8 +14,8 @@
  * ==========================================================
  */
 
+ 
 // Remember to add comments!!!
-import java.util.Scanner;
 
 public class Group01 {
   public static void main(String[] args) {
@@ -24,9 +26,9 @@ public class Group01 {
     double dblFirstNumber = 0;
     double dblSecondNumber = 0;
     int intUserChoice = 0;
-	char charConfirm = 0;
+	  char charConfirm = 0;
 
-	do {
+	  do {
     	// Calculator Interface
     	System.out.println("--- Scientific Calculator ---");
     	System.out.println("1. Add the Numbers");
@@ -59,8 +61,8 @@ public class Group01 {
       		case 5: 
         		operationModulo(dblFirstNumber, dblSecondNumber, scanner); // Modulo numbers
         		break;
-      		case 6: 
-        		operationFactorial(dblFirstNumber, scanner); // Factorial of a number
+      		case 6:
+            operationFactorial(dblFirstNumber, scanner); // Factorial of a number
         		break;
       		case 7: 
         		operationPower(dblFirstNumber, dblSecondNumber, scanner); // Power of numbers
@@ -74,7 +76,7 @@ public class Group01 {
 			}
 
 		// Exit Confirmation
-		if (inputOperation == 8) {
+		if (intUserChoice == 8) {
 			// Loop until user inputs Y or N
         	while (true) {
                 System.out.println("Are you sure you want to exit? (Y/N)"); // Ask for confirmation
@@ -89,10 +91,9 @@ public class Group01 {
                 } else { // if Input is none of the above, repeat loop
                     System.out.println("Enter a valid character (Y/N):");
                     continue;
-                	}
-            	}
-            }
-		
+                }  
+              }
+            }                                            
 		} while (true);
 	}
 
@@ -191,12 +192,12 @@ public class Group01 {
         double dblResult = 1;
         double dblDecimal;
 		// If statement when the exponent is positive integer
-        if (exp >= 0) {
+        if (dblSecondValue >= 0) {
             for (int i = 0; i < dblSecondValue; i++) {
                 dblResult *= dblFirstValue;
             }
 			// Print output
-            System.out.printfln("%.1f ^ %.1f = %.1f", dblFirstValue, dblSecondValue, dblResult);
+            System.out.printf("%.1f ^ %.1f = %.1f", dblFirstValue, dblSecondValue, dblResult);
 		// Else if the exponent is negative integer
         } else {
             for (int i = 0; i < (-dblSecondValue); i++) {
