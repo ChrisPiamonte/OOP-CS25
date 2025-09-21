@@ -11,7 +11,7 @@
  *   unless instructed.
  * ==========================================================
  */
-
+// remember to add comments!!!
 public class Group01 {
   public static void main(String[] args) {
     tanggalin ko raw
