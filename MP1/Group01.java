@@ -179,4 +179,32 @@ public class Group01 {
             }
         }
     }
+
+	// Power Method
+	public static void operationPower(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+		// Input the base number
+        System.out.print("Input the base: ");
+        dblFirstValue = scanner.nextDouble();
+		 // Input the exponent number
+        System.out.print("Input the exponent: ");
+        dblSecondValue = scanner.nextDouble();
+        double dblResult = 1;
+        double dblDecimal;
+		// If statement when the exponent is positive integer
+        if (exp >= 0) {
+            for (int i = 0; i < dblSecondValue; i++) {
+                dblResult *= dblFirstValue;
+            }
+			// Print output
+            System.out.printfln("%.1f ^ %.1f = %.1f", dblFirstValue, dblSecondValue, dblResult);
+		// Else if the exponent is negative integer
+        } else {
+            for (int i = 0; i < (-dblSecondValue); i++) {
+                dblResult *= dblFirstValue;
+            }
+            dblDecimal = 1 / dblResult;
+			// Print output
+            System.out.printf("%.1f ^ %.1f = 1 / %.1f or %.2f\n", dblFirstValue, dblSecondValue, dblResult, dblDecimal); 
+        }
+    }
 }
