@@ -123,7 +123,7 @@ public class Group01 {
     }
 
     // Multiply Method
-    public static void product(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+    public static void operationMultiply(double dblFirstValue, double dblSecondValue, Scanner scanner) {
         // Input first number
         System.out.print("Input first number: ");
         dblFirstValue = scanner.nextDouble();
@@ -135,7 +135,7 @@ public class Group01 {
     }
 
     // Divide Method
-    public static void divide(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+    public static void operationDivide(double dblFirstValue, double dblSecondValue, Scanner scanner) {
         // Input first number
         System.out.print("Input first number: ");
         dblFirstValue = scanner.nextDouble();
@@ -157,7 +157,7 @@ public class Group01 {
     }
 
     // Modulo Method
-    public static void modulo(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+    public static void operationModulo(double dblFirstValue, double dblSecondValue, Scanner scanner) {
         // Input first number
         System.out.print("Input first number: ");
         dblFirstValue = scanner.nextDouble();
