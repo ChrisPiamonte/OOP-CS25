@@ -16,20 +16,16 @@ import java.util.Scanner;
 
 // Remember to add comments!!!
 
-public class Main {
+public class Group01 {
     public static void main(String[] args) {
-        // Initialize scanner
-        Scanner scanner = new Scanner(System.in);
-
-        // Standard variables
+        Scanner scanner = new Scanner(System.in); // Initializes scanner and standard variables
         double dblFirstNumber = 0;
         double dblSecondNumber = 0;
         int intUserChoice = 0;
-        char charConfirm = 0;
+        char charConfirm = '0';
 
         do {
-            // Calculator Interface
-            System.out.println("--- Scientific Calculator ---");
+            System.out.println("--- Scientific Calculator ---"); // Prints the calculator interface
             System.out.println("1. Add the Numbers");
             System.out.println("2. Subtract the Numbers");
             System.out.println("3. Multiply Numbers");
@@ -37,65 +33,58 @@ public class Main {
             System.out.println("5. Modulus of Two Numbers");
             System.out.println("6. Factorial of a Number");
             System.out.println("7. Power of a Number");
-            System.out.println("8. EXIT");
+            System.out.println("8. Exit");
             System.out.print("Enter your choice here: ");
 
-            // Take input for Menu Choice
-            while (!scanner.hasNextInt()) {
-                // Checks if the value is not a valid integer
+            while (!scanner.hasNextInt()) { // Takes user input for menu choice and checks for valid input
                 System.out.print("Invalid.\nPlease enter a valid choice: ");
-                // Consume invalid input
-                scanner.nextLine();
+                scanner.nextLine(); // Consumes invalid input
             }
             intUserChoice = scanner.nextInt();
-            // Consume leftover newline
-            scanner.nextLine();
+            scanner.nextLine(); // Consumes leftover new line
 
-            // Switch case for operations
-            switch (intUserChoice) {
+            switch (intUserChoice) { // Switch Case for methods
                 case 1:
-                    operationAdd(dblFirstNumber, dblSecondNumber, scanner); // Add numbers
+                    operationAdd(dblFirstNumber, dblSecondNumber, scanner); // Calls the method for addition
                     break;
                 case 2:
-                    operationSubtract(dblFirstNumber, dblSecondNumber, scanner); // Subtract numbers
+                    operationSubtract(dblFirstNumber, dblSecondNumber, scanner); // Calls method for subtraction
                     break;
                 case 3:
-                    operationMultiply(dblFirstNumber, dblSecondNumber, scanner); // Multiply numbers
+                    operationMultiply(dblFirstNumber, dblSecondNumber, scanner); // Calls method for multiplication
                     break;
                 case 4:
-                    operationDivide(dblFirstNumber, dblSecondNumber, scanner); // Divide numbers
+                    operationDivide(dblFirstNumber, dblSecondNumber, scanner); // Calls method for division
                     break;
                 case 5:
-                    operationModulo(dblFirstNumber, dblSecondNumber, scanner); // Modulo numbers
+                    operationModulo(dblFirstNumber, dblSecondNumber, scanner); // Calls method for modulo
                     break;
                 case 6:
-                    operationFactorial(dblFirstNumber, scanner); // Factorial of a number
+                    operationFactorial(scanner); // Calls method for factorial
                     break;
                 case 7:
-                    operationPower(dblFirstNumber, dblSecondNumber, scanner); // Power of numbers
+                    operationPower(dblFirstNumber, dblSecondNumber, scanner); // Calls method for power
                     break;
                 case 8:
-                    System.out.println("Exiting Calculator..."); // Exit option
+                    System.out.println("Exiting Calculator..."); // Prints exit message
                     break;
                 default:
-                    System.out.println("Invalid choice. Please enter a valid number from 1-8."); // Error handling
+                    System.out.println("Invalid choice. Please enter a valid number from 1-8."); // Handles invalid input
                     break;
             }
 
-            // Exit Confirmation
-            if (intUserChoice == 8) {
-                // Loop until user inputs Y or N
+            if (intUserChoice == 8) { // Confirms user choice upon exit
                 while (true) {
-                    System.out.println("Are you sure you want to exit? (Y/N)"); // Ask for confirmation
-                    charConfirm = scanner.next().charAt(0); // Takes the first character
-                    // if input is Y immediately exit
-                    if (charConfirm == 'y' || charConfirm == 'Y') {
+                    System.out.println("Are you sure you want to exit? (Y/N)");
+                    charConfirm = scanner.next().charAt(0);
+
+                    if (charConfirm == 'y' || charConfirm == 'Y') { // Checks character input
                         System.out.println("Terminated.");
                         System.exit(0);
-                    } else if (charConfirm == 'n' || charConfirm == 'N') { // If input is N then return to menu
+                    } else if (charConfirm == 'n' || charConfirm == 'N') {
                         System.out.println("Returning to menu...");
                         break;
-                    } else { // if Input is none of the above, repeat loop
+                    } else { // Handles invalid input
                         System.out.println("Enter a valid character.");
                         continue;
                     }
@@ -104,132 +93,94 @@ public class Main {
         } while (true);
     }
 
-    // PUBLIC OPERATION METHODS
+    // OPERATION METHODS
 
-    // Add Method
+    // Addition Method
     public static void operationAdd(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        // Input first number
-        System.out.print("Input first number: ");
-        while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
+        System.out.print("Input first number: "); // Asks for the first number
+        while (!scanner.hasNextDouble()) { // Checks for invalid input
             System.out.print("Invalid.\nInput first number: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Input second number
-        System.out.print("Input second number: ");
+        System.out.print("Input second number: "); // Asks for the second number
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput second number: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblSecondValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Print output
-        System.out.printf("%.1f + %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue + dblSecondValue));
+        System.out.printf("%.1f + %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue + dblSecondValue)); // Prints and computes result
     }
 
-    // Subtract Method
+    // Subtraction Method
     public static void operationSubtract(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        // Input first number
         System.out.print("Input first number: ");
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput first number: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Input second number
         System.out.print("Input second number: ");
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput second number: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblSecondValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Print output
         System.out.printf("%.1f - %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue - dblSecondValue));
     }
 
-    // Multiply Method
+    // Multiplication Method
     public static void operationMultiply(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        // Input first number
         System.out.print("Input first number: ");
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput first number: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Input second number
         System.out.print("Input second number: ");
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput second number: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblSecondValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Print output
         System.out.printf("%.1f x %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue * dblSecondValue));
     }
 
-    // Divide Method
+    // Division Method
     public static void operationDivide(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        // Input first number
         System.out.print("Input first number: ");
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput first number: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Error case handling if divisor is 0
-        while (true) {
+        while (true) { // Handles an edge case: if divisor is 0
             System.out.print("Input second number: ");
             while (!scanner.hasNextDouble()) {
-                // Checks if the value is not a valid double
                 System.out.print("Invalid.\nInput second number: ");
-                // Consume invalid input
                 scanner.nextLine();
             }
             dblSecondValue = scanner.nextDouble();
-            // Consume leftover newline
             scanner.nextLine();
 
-            // Conditionals
             if (dblSecondValue == 0) {
-                // Return to top if divisor is 0
                 System.out.println("Zero is not a valid divisor.");
                 continue;
             } else {
-                // Print output
                 System.out.printf("%.1f / %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue / dblSecondValue));
                 break;
             }
@@ -238,38 +189,27 @@ public class Main {
 
     // Modulo Method
     public static void operationModulo(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        // Input first number
         System.out.print("Input first number: ");
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput first number: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Error case handling in case of 0 modulos
         while (true) {
             System.out.print("Input second number: ");
             while (!scanner.hasNextDouble()) {
-                // Checks if the value is not a valid double
                 System.out.print("Invalid.\nInput second number: ");
-                // Consume invalid input
                 scanner.nextLine();
             }
             dblSecondValue = scanner.nextDouble();
-            // Consume leftover newline
             scanner.nextLine();
 
-            // Conditionals
             if (dblSecondValue == 0) {
-                // If divisor is 0, return to top
                 System.out.println("Zero is not applicable for modulos operation.");
                 continue;
             } else {
-                // Print output
                 System.out.printf("%.1f %% %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue % dblSecondValue));
                 break;
             }
@@ -277,57 +217,68 @@ public class Main {
     }
 
     // Factorial Method
-    public static void operationFactorial(double dblFirstValue, double dblSecondValue, Scanner scanner) {
+    public static void operationFactorial(Scanner scanner) {
+        long longFactorial, longResult = 1;
+        
+        while (true) { // Handles an edge case: if the input is negative
+            System.out.print("Input a non-negative integer: ");
+            if (scanner.hasNextLong()) {
+                longFactorial = scanner.nextLong();
 
+                if (longFactorial < 0) {
+                    System.out.println("Factorial is not defined for negative numbers.");
+                    continue;
+                }
+
+                break;
+            } else {
+                System.out.println("Invalid input.");
+                scanner.next();
+            }
+        }
+        
+        for (long i = 1; i <= longFactorial; i++) { // Computes for the factorial
+                longResult *= i;
+        }
+
+        System.out.printf("%d! = %d\n\n", longFactorial, longResult);
     }
 
     // Power Method
     public static void operationPower(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        // Input the base number
         System.out.print("Input the base: ");
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput the base: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Input the exponent number
         System.out.print("Input the exponent: ");
         while (!scanner.hasNextDouble()) {
-            // Checks if the value is not a valid double
             System.out.print("Invalid.\nInput the exponent: ");
-            // Consume invalid input
             scanner.nextLine();
         }
         dblSecondValue = scanner.nextDouble();
-        // Consume leftover newline
         scanner.nextLine();
 
-        // Initialize variables for positive and negative exponent
-        double dblResult = 1;
+        double dblResult = 1; // Initializes variables for positive and negative exponents
         int intResult = 0;
         double dblDecimal;
 
-        // If statement when the exponent is positive integer
-        if (dblSecondValue >= 0) {
+        if (dblSecondValue >= 0) { // Handles an edge case: if exponent is negative
             for (int i = 0; i < dblSecondValue; i++) {
                 dblResult *= dblFirstValue;
             }
-            // Print output
+            
             System.out.printf("%.1f ^ %.1f = %.1f\n", dblFirstValue, dblSecondValue, dblResult);
-            // Else if the exponent is negative integer
         } else {
             for (int i = 0; i < (-dblSecondValue); i++) {
                 dblResult *= dblFirstValue;
-                // To typecast double to int
-                intResult = (int) dblResult;
+                intResult = (int) dblResult; // Typecast double into int
             }
             dblDecimal = 1 / dblResult;
-            // Print output
+
             System.out.printf("%.1f ^ %.1f = 1 / %d or %.2f\n\n", dblFirstValue, dblSecondValue, intResult, dblDecimal);
         }
     }
