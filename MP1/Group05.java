@@ -14,10 +14,10 @@
 
 public class Group05 {
   public static void main(String[] args) {
-    int n = 5;
+    int intNumber = 5;
     
     // Problem 1
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= intNumber; i++) {
       for (int j = 1; j <= i; j++){
         System.out.print ("* ");
       }
@@ -27,7 +27,7 @@ public class Group05 {
     System.out.println ();
 
     //Problem 2
-    for (int i = n; i >= 1; i--) {
+    for (int i = intNumber; i >= 1; i--) {
       for (int j = 1; j <= i; j++) {
         System.out.print ("* ");
       }
@@ -37,7 +37,7 @@ public class Group05 {
     System.out.println ();
 
     //Problem 3
-    for (int i = 1; i <= n; i++){
+    for (int i = 1; i <= intNumber; i++){
       for (int j = 1; j <= i; j++){
         System.out.print (j + " ");
       }
@@ -47,8 +47,8 @@ public class Group05 {
     System.out.println();
 
     //Challenge Problem 
-    for (int i = 1; i <= n; i++){
-      for (int k = n - 1; k >= i; k--){
+    for (int i = 1; i <= intNumber; i++){
+      for (int k = intNumber - 1; k >= i; k--){
         System.out.print (" ");
       }
       for (int j = 1; j <= i; j++){
