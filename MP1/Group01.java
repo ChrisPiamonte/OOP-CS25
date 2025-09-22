@@ -111,7 +111,7 @@ public class Group01 {
         dblSecondValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.printf("\t%.1f + %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue + dblSecondValue)); // Prints and computes result
+        System.out.printf("\t%f + %f = %f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue + dblSecondValue)); // Prints and computes result
     }
 
     // Subtraction Method
@@ -133,7 +133,7 @@ public class Group01 {
         dblSecondValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.printf("\t%.1f - %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue - dblSecondValue));
+        System.out.printf("\t%f - %f = %f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue - dblSecondValue));
     }
 
     // Multiplication Method
@@ -155,7 +155,7 @@ public class Group01 {
         dblSecondValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.printf("\t%.1f x %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue * dblSecondValue));
+        System.out.printf("\t%f x %f = %f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue * dblSecondValue));
     }
 
     // Division Method
@@ -182,7 +182,7 @@ public class Group01 {
                 System.out.println("\tZero is not a valid divisor.");
                 continue;
             } else {
-                System.out.printf("\t%.1f / %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue / dblSecondValue));
+                System.out.printf("\t%f / %f = %f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue / dblSecondValue));
                 break;
             }
         }
@@ -212,7 +212,7 @@ public class Group01 {
                 System.out.println("\tZero is not applicable for modulos operation.");
                 continue;
             } else {
-                System.out.printf("\t%.1f %% %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue % dblSecondValue));
+                System.out.printf("\t%f %% %f = %f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue % dblSecondValue));
                 break;
             }
         }
@@ -275,7 +275,7 @@ public class Group01 {
                 dblResult *= dblFirstValue;
             }
             
-            System.out.printf("\t%.1f ^ %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, dblResult);
+            System.out.printf("\t%f ^ %f = %f\n\n", dblFirstValue, dblSecondValue, dblResult);
         } else { // Handles an edge case: if exponent is negative
             for (int i = 0; i < (-dblSecondValue); i++) {
                 dblResult *= dblFirstValue;
@@ -283,7 +283,7 @@ public class Group01 {
             }
             dblDecimal = 1 / dblResult;
 
-            System.out.printf("\t%.1f ^ %.1f = 1 / %d or %.2f\n\n", dblFirstValue, dblSecondValue, intResult, dblDecimal);
+            System.out.printf("\t%f ^ %f = 1 / %d or %f\n\n", dblFirstValue, dblSecondValue, intResult, dblDecimal);
         }
     }
 }
