@@ -13,40 +13,33 @@
  */
 
 public class Group05 {
-  public static void main(String[] args) {
-    int intNumber = 5;
-    
-    // Problem 1
-    for (int intI = 1; intI <= intNumber; intI++) {
+
+  public static void rightTriangle (int intNumber){
+     for (int intI = 1; intI <= intNumber; intI++) {
       for (int intJ = 1; intJ <= intI; intJ++){
         System.out.print ("* ");
       }
       System.out.println();
     }
+  }
 
-    System.out.println ();
-
-    //Problem 2
+  public static void invertedRightTriangle (int intNumber){
     for (int intI = intNumber; intI >= 1; intI--) {
       for (int intJ = 1; intJ <= intI; intJ++) {
         System.out.print ("* ");
       }
       System.out.println();
     }
-
-    System.out.println ();
-
-    //Problem 3
+  }
+  public static void numberTriangle (int intNumber){
     for (int intI = 1; intI <= intNumber; intI++){
       for (int intJ = 1; intJ <= intI; intJ++){
         System.out.print (intJ + " ");
       }
       System.out.println();
     }
-
-    System.out.println();
-
-    //Challenge Problem 
+  }
+  public static void challengePyramid (int intNumber){
     for (int intI = 1; intI <= intNumber; intI++){
       for (int intK = intNumber - 1; intK >= intI; intK--){
         System.out.print (" ");
@@ -56,5 +49,23 @@ public class Group05 {
       }
       System.out.println();
     }
+  }
+  public static void main(String[] args) {
+    int intNumber = 5;
+    
+    // Problem 1
+    rightTriangle(intNumber);
+    System.out.println ();
+
+    //Problem 2
+    invertedRightTriangle (intNumber);
+    System.out.println ();
+
+    //Problem 3
+    numberTriangle (intNumber);
+    System.out.println();
+
+    //Challenge Problem 
+    challengePyramid (intNumber);
   }
 }
