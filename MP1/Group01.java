@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /*
  * ==========================================================
  *  Machine Problem 1 - Workspace for Group 01
@@ -14,30 +12,29 @@ import java.util.Scanner;
  * ==========================================================
  */
 
-// Remember to add comments!!!
+import java.util.Scanner;
 
 public class Group01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); // Initializes scanner and standard variables
-        double dblFirstNumber = 0;
-        double dblSecondNumber = 0;
+        double dblFirstNumber = 0, dblSecondNumber = 0;
         int intUserChoice = 0;
         char charConfirm = '0';
 
         do {
-            System.out.println("--- Scientific Calculator ---"); // Prints the calculator interface
-            System.out.println("1. Add the Numbers");
-            System.out.println("2. Subtract the Numbers");
-            System.out.println("3. Multiply Numbers");
-            System.out.println("4. Divide Numbers");
-            System.out.println("5. Modulus of Two Numbers");
-            System.out.println("6. Factorial of a Number");
-            System.out.println("7. Power of a Number");
-            System.out.println("8. Exit");
-            System.out.print("Enter your choice here: ");
+            System.out.println("\t\t--- Scientific Calculator ---"); // Prints the calculator interface
+            System.out.println("\t1. Add the Numbers");
+            System.out.println("\t2. Subtract the Numbers");
+            System.out.println("\t3. Multiply Numbers");
+            System.out.println("\t4. Divide Numbers");
+            System.out.println("\t5. Modulus of Two Numbers");
+            System.out.println("\t6. Factorial of a Number");
+            System.out.println("\t7. Power of a Number");
+            System.out.println("\t8. Exit");
+            System.out.print("\tEnter your choice here: ");
 
             while (!scanner.hasNextInt()) { // Takes user input for menu choice and checks for valid input
-                System.out.print("Invalid.\nPlease enter a valid choice: ");
+                System.out.print("\tInvalid.\n\tPlease enter a valid choice: ");
                 scanner.nextLine(); // Consumes invalid input
             }
             intUserChoice = scanner.nextInt();
@@ -66,26 +63,26 @@ public class Group01 {
                     operationPower(dblFirstNumber, dblSecondNumber, scanner); // Calls method for power
                     break;
                 case 8:
-                    System.out.println("Exiting Calculator..."); // Prints exit message
+                    System.out.println("\tExiting Calculator..."); // Prints exit message
                     break;
                 default:
-                    System.out.println("Invalid choice. Please enter a valid number from 1-8."); // Handles invalid input
+                    System.out.println("\tInvalid choice. Please enter a valid number from 1-8.\n\n"); // Handles invalid input
                     break;
             }
 
             if (intUserChoice == 8) { // Confirms user choice upon exit
                 while (true) {
-                    System.out.println("Are you sure you want to exit? (Y/N)");
+                    System.out.println("\tAre you sure you want to exit? (Y/N)");
                     charConfirm = scanner.next().charAt(0);
 
                     if (charConfirm == 'y' || charConfirm == 'Y') { // Checks character input
-                        System.out.println("Terminated.");
+                        System.out.println("\tTerminated.");
                         System.exit(0);
                     } else if (charConfirm == 'n' || charConfirm == 'N') {
-                        System.out.println("Returning to menu...");
+                        System.out.println("\tReturning to menu...");
                         break;
                     } else { // Handles invalid input
-                        System.out.println("Enter a valid character.");
+                        System.out.println("\tEnter a valid character.");
                         continue;
                     }
                 }
@@ -97,40 +94,40 @@ public class Group01 {
 
     // Addition Method
     public static void operationAdd(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        System.out.println("ADDITION");
-        System.out.print("Input first number: "); // Asks for the first number
+        System.out.println("\n\tADDITION");
+        System.out.print("\tInput first number: "); // Asks for the first number
         while (!scanner.hasNextDouble()) { // Checks for invalid input
-            System.out.print("Invalid.\nInput first number: ");
+            System.out.print("\tInvalid.\n\tInput first number: ");
             scanner.nextLine(); // Consumes invalid input
         }
         dblFirstValue = scanner.nextDouble();
         scanner.nextLine(); // Consume leftover newline 
 
-        System.out.print("Input second number: "); // Asks for the second number
+        System.out.print("\tInput second number: "); // Asks for the second number
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput second number: ");
+            System.out.print("\tInvalid.\n\tInput second number: ");
             scanner.nextLine();
         }
         dblSecondValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.printf("%.1f + %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue + dblSecondValue)); // Prints and computes result
+        System.out.printf("\t%.1f + %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue + dblSecondValue)); // Prints and computes result
     }
 
     // Subtraction Method
     public static void operationSubtract(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        System.out.println("SUBTRACTION");
-        System.out.print("Input first number: ");
+        System.out.println("\n\tSUBTRACTION");
+        System.out.print("\tInput first number: ");
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput first number: ");
+            System.out.print("\tInvalid.\n\tInput first number: ");
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.print("Input second number: ");
+        System.out.print("\tInput second number: ");
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput second number: ");
+            System.out.print("\tInvalid.\n\tInput second number: ");
             scanner.nextLine();
         }
         dblSecondValue = scanner.nextDouble();
@@ -141,18 +138,18 @@ public class Group01 {
 
     // Multiplication Method
     public static void operationMultiply(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        System.out.println("MULTIPLICATION");
-        System.out.print("Input first number: ");
+        System.out.println("\n\tMULTIPLICATION");
+        System.out.print("\tInput first number: ");
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput first number: ");
+            System.out.print("\tInvalid.\n\tInput first number: ");
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.print("Input second number: ");
+        System.out.print("\tInput second number: ");
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput second number: ");
+            System.out.print("\tInvalid.\n\tInput second number: ");
             scanner.nextLine();
         }
         dblSecondValue = scanner.nextDouble();
@@ -163,29 +160,29 @@ public class Group01 {
 
     // Division Method
     public static void operationDivide(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        System.out.println("DIVISION");
-        System.out.print("Input first number: ");
+        System.out.println("\n\tDIVISION");
+        System.out.print("\tInput first number: ");
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput first number: ");
+            System.out.print("\tInvalid.\n\tInput first number: ");
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
         scanner.nextLine();
 
         while (true) { // Handles an edge case: if divisor is 0
-            System.out.print("Input second number: ");
+            System.out.print("\tInput second number: ");
             while (!scanner.hasNextDouble()) {
-                System.out.print("Invalid.\nInput second number: ");
+                System.out.print("\tInvalid.\n\tInput second number: ");
                 scanner.nextLine();
             }
             dblSecondValue = scanner.nextDouble();
             scanner.nextLine();
 
             if (dblSecondValue == 0) {
-                System.out.println("Zero is not a valid divisor.");
+                System.out.println("\tZero is not a valid divisor.");
                 continue;
             } else {
-                System.out.printf("%.1f / %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue / dblSecondValue));
+                System.out.printf("\t%.1f / %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue / dblSecondValue));
                 break;
             }
         }
@@ -193,29 +190,29 @@ public class Group01 {
 
     // Modulo Method
     public static void operationModulo(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        System.out.println("MODULO");
-        System.out.print("Input first number: ");
+        System.out.println("\n\tMODULO");
+        System.out.print("\tInput first number: ");
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput first number: ");
+            System.out.print("\tInvalid.\n\tInput first number: ");
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
         scanner.nextLine();
 
         while (true) {
-            System.out.print("Input second number: ");
+            System.out.print("\tInput second number: ");
             while (!scanner.hasNextDouble()) {
-                System.out.print("Invalid.\nInput second number: ");
+                System.out.print("\tInvalid.\n\tInput second number: ");
                 scanner.nextLine();
             }
             dblSecondValue = scanner.nextDouble();
             scanner.nextLine();
 
             if (dblSecondValue == 0) {
-                System.out.println("Zero is not applicable for modulos operation.");
+                System.out.println("\tZero is not applicable for modulos operation.");
                 continue;
             } else {
-                System.out.printf("%.1f %% %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue % dblSecondValue));
+                System.out.printf("\t%.1f %% %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue % dblSecondValue));
                 break;
             }
         }
@@ -223,22 +220,22 @@ public class Group01 {
 
     // Factorial Method
     public static void operationFactorial(Scanner scanner) {
-        System.out.println("FACTORIAL");
+        System.out.println("\n\tFACTORIAL");
         long longFactorial, longResult = 1;
         
         while (true) { // Handles an edge case: if the input is negative
-            System.out.print("Input a non-negative integer: ");
+            System.out.print("\tInput a non-negative integer: ");
             if (scanner.hasNextLong()) {
                 longFactorial = scanner.nextLong();
 
                 if (longFactorial < 0) {
-                    System.out.println("Factorial is not defined for negative numbers.");
+                    System.out.println("\tFactorial is not defined for negative numbers.");
                     continue;
                 }
 
                 break;
             } else {
-                System.out.println("Invalid input.");
+                System.out.println("\tInvalid input.");
                 scanner.next();
             }
         }
@@ -247,23 +244,23 @@ public class Group01 {
                 longResult *= i;
         }
 
-        System.out.printf("%d! = %d\n\n", longFactorial, longResult);
+        System.out.printf("\t%d! = %d\n\n", longFactorial, longResult);
     }
 
     // Power Method
     public static void operationPower(double dblFirstValue, double dblSecondValue, Scanner scanner) {
-        System.out.println("POWER");
-        System.out.print("Input the base: ");
+        System.out.println("\n\tPOWER");
+        System.out.print("\tInput the base: ");
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput the base: ");
+            System.out.print("\tInvalid.\n\tInput the base: ");
             scanner.nextLine();
         }
         dblFirstValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.print("Input the exponent: ");
+        System.out.print("\tInput the exponent: ");
         while (!scanner.hasNextDouble()) {
-            System.out.print("Invalid.\nInput the exponent: ");
+            System.out.print("\tInvalid.\n\tInput the exponent: ");
             scanner.nextLine();
         }
         dblSecondValue = scanner.nextDouble();
@@ -278,7 +275,7 @@ public class Group01 {
                 dblResult *= dblFirstValue;
             }
             
-            System.out.printf("%.1f ^ %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, dblResult);
+            System.out.printf("\t%.1f ^ %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, dblResult);
         } else { // Handles an edge case: if exponent is negative
             for (int i = 0; i < (-dblSecondValue); i++) {
                 dblResult *= dblFirstValue;
@@ -286,7 +283,7 @@ public class Group01 {
             }
             dblDecimal = 1 / dblResult;
 
-            System.out.printf("%.1f ^ %.1f = 1 / %d or %.2f\n\n", dblFirstValue, dblSecondValue, intResult, dblDecimal);
+            System.out.printf("\t%.1f ^ %.1f = 1 / %d or %.2f\n\n", dblFirstValue, dblSecondValue, intResult, dblDecimal);
         }
     }
 }
