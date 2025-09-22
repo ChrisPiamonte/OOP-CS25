@@ -72,7 +72,7 @@ public class Group01 {
 
             if (intUserChoice == 8) { // Confirms user choice upon exit
                 while (true) {
-                    System.out.println("\tAre you sure you want to exit? (Y/N)");
+                    System.out.print("\tAre you sure you want to exit? (Y/N): ");
                     charConfirm = scanner.next().charAt(0);
 
                     if (charConfirm == 'y' || charConfirm == 'Y') { // Checks character input
