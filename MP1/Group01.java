@@ -133,7 +133,7 @@ public class Group01 {
         dblSecondValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.printf("%.1f - %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue - dblSecondValue));
+        System.out.printf("\t%.1f - %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue - dblSecondValue));
     }
 
     // Multiplication Method
@@ -155,7 +155,7 @@ public class Group01 {
         dblSecondValue = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.printf("%.1f x %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue * dblSecondValue));
+        System.out.printf("\t%.1f x %.1f = %.1f\n\n", dblFirstValue, dblSecondValue, (dblFirstValue * dblSecondValue));
     }
 
     // Division Method
