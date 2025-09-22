@@ -17,8 +17,8 @@ public class Group05 {
     int intNumber = 5;
     
     // Problem 1
-    for (int i = 1; i <= intNumber; i++) {
-      for (int j = 1; j <= i; j++){
+    for (int intI = 1; intI <= intNumber; intI++) {
+      for (int intJ = 1; intJ <= intI; intJ++){
         System.out.print ("* ");
       }
       System.out.println();
@@ -27,8 +27,8 @@ public class Group05 {
     System.out.println ();
 
     //Problem 2
-    for (int i = intNumber; i >= 1; i--) {
-      for (int j = 1; j <= i; j++) {
+    for (int intI = intNumber; intI >= 1; intI--) {
+      for (int intJ = 1; intJ <= intI; intJ++) {
         System.out.print ("* ");
       }
       System.out.println();
@@ -37,9 +37,9 @@ public class Group05 {
     System.out.println ();
 
     //Problem 3
-    for (int i = 1; i <= intNumber; i++){
-      for (int j = 1; j <= i; j++){
-        System.out.print (j + " ");
+    for (int intI = 1; intI <= intNumber; intI++){
+      for (int intJ = 1; intJ <= intI; intJ++){
+        System.out.print (intJ + " ");
       }
       System.out.println();
     }
@@ -47,11 +47,11 @@ public class Group05 {
     System.out.println();
 
     //Challenge Problem 
-    for (int i = 1; i <= intNumber; i++){
-      for (int k = intNumber - 1; k >= i; k--){
+    for (int intI = 1; intI <= intNumber; intI++){
+      for (int intK = intNumber - 1; intK >= intI; intK--){
         System.out.print (" ");
       }
-      for (int j = 1; j <= i; j++){
+      for (int intJ = 1; intJ <= intI; intJ++){
         System.out.print ("* ");
       }
       System.out.println();
