@@ -79,7 +79,7 @@ public class Group01 {
                         System.out.println("\tTerminated.");
                         System.exit(0);
                     } else if (charConfirm == 'n' || charConfirm == 'N') {
-                        System.out.println("\tReturning to menu...");
+                        System.out.println("\tReturning to menu...\n");
                         break;
                     } else { // Handles invalid input
                         System.out.println("\tEnter a valid character.");
