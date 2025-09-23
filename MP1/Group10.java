@@ -45,6 +45,6 @@ public class Group10 {
         intSum += intI;
       }
     }
-    System.out.println("\nSum: " + intSum);
+    System.out.printf("\nSum of Armstrong numbers from %d to %d: %d\n", INT_RANGE_MIN, INT_RANGE_MAX, intSum);
   }
 }
