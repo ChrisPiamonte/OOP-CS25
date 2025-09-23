@@ -16,21 +16,32 @@ public class Group10 {
   public static final int INT_RANGE_MIN = 100;
   public static final int INT_RANGE_MAX = 999;
 
+  public static boolean isArmstrong(int intN) {
+    int intTemp = intN;
+    int intDigitCount = 0;
+    int intPowSum = 0;
+
+    while (intTemp > 0) {
+      intTemp /= 10;
+      intDigitCount++;
+    }
+    intTemp = intN;
+
+    while (intTemp > 0) {
+      int intDigit = intTemp % 10;
+      intPowSum += (int)Math.pow(intDigit, intDigitCount);
+      intTemp /= 10;
+    }
+
+    return intN == intPowSum;
+  }
+
   public static void main(String[] args) {
     int intSum = 0;
-
     for (int intI = INT_RANGE_MIN; intI <= INT_RANGE_MAX; intI++) {
-      int intDigit1 = intI / 100;
-      int intDigit2 = (intI / 10) % 10;
-      int intDigit3 = intI % 10;
-
-      int intCube1 = intDigit1 * intDigit1 * intDigit1;
-      int intCube2 = intDigit2 * intDigit2 * intDigit2;
-      int intCube3 = intDigit3 * intDigit3 * intDigit3;
-
-      if (intI == intCube1 + intCube2 + intCube3) {
-        intSum += intI;
+      if (isArmstrong(intI)) {
         System.out.print(intI + " ");
+        intSum += intI;
       }
     }
     System.out.println("\nSum: " + intSum);
