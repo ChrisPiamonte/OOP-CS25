@@ -38,9 +38,10 @@ public class Group10 {
 
   public static void main(String[] args) {
     int intSum = 0;
+    System.out.printf("Armstrong numbers from %d to %d:\n", INT_RANGE_MIN, INT_RANGE_MAX);
     for (int intI = INT_RANGE_MIN; intI <= INT_RANGE_MAX; intI++) {
       if (isArmstrong(intI)) {
-        System.out.print(intI + " ");
+        System.out.printf("%d ", intI);
         intSum += intI;
       }
     }
