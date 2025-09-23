@@ -13,16 +13,13 @@ public class Group09 {
   }
 
   public static boolean checkPalindrome(int intNumber) {
-    return intNumber == reverseNumber(intNumber);
-  }
-
-  public static int reverseNumber(int intNumber) {
+    int intOriginalNumber = intNumber;
     String strReversedNumber = "";
     while (intNumber > 0) {
       int intLastDigit = intNumber % 10;
       strReversedNumber += intLastDigit;
       intNumber /= 10;
     }
-    return Integer.parseInt(strReversedNumber);
+    return intOriginalNumber  == Integer.parseInt(strReversedNumber);
   }
-}
+} 
