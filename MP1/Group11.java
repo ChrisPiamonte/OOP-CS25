@@ -22,7 +22,7 @@ public class Group11 {
 
     System.out.print("Prime Numbers (1-100): ");
 
-    for(int i = 1; i < 100; i++){
+    for(int i = 1; i <= 100; i++){
       boolean boolIsPrime = true; // Assume number is a prime
 
       if(i <= 1){ //Checks if number is less than or equal to 1
