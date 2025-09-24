@@ -20,7 +20,7 @@ public class Group04 {
     double dblFourthGrade = 88;
     double dblFifthGrade = 67;
 
-    double fltAverageGrade = (double) (dblFirstGrade + dblSecondGrade + dblThirdGrade + dblFourthGrade + dblFifthGrade) / 5;
+    double dblAverageGrade = (double) (dblFirstGrade + dblSecondGrade + dblThirdGrade + dblFourthGrade + dblFifthGrade) / 5;
     double dblHighestGrade = highest(highest(highest(highest(dblFirstGrade, dblSecondGrade), dblThirdGrade), dblFourthGrade), dblFifthGrade);
     double dblLowestGrade  = lowest(lowest(lowest(lowest(dblFirstGrade, dblSecondGrade), dblThirdGrade), dblFourthGrade), dblFifthGrade); 
 
@@ -43,7 +43,7 @@ public class Group04 {
 
     System.out.println("Highest Grade: " + dblHighestGrade);
     System.out.println("Lowest Grade: " + dblLowestGrade);
-    System.out.println("Average Grade: " + fltAverageGrade);
+    System.out.println("Average Grade: " + dblAverageGrade);
     System.out.println(studentsPassed + " student/s have passed"); 
     System.out.println(studentsFailed + " student/s have failed");
   }
@@ -64,13 +64,13 @@ public class Group04 {
     } 
   }
 
-  public static void printGradeRemark(double intGrade) {
-    System.out.print(intGrade + "- ");
-    if (intGrade < 75) {
+  public static void printGradeRemark(double dblGrade) {
+    System.out.print(dblGrade + "- ");
+    if (dblGrade < 75) {
         System.out.println("Fail");
-    } else if (intGrade < 80) {
+    } else if (dblGrade < 80) {
         System.out.println("Good");
-    } else if (intGrade < 90) {
+    } else if (dblGrade < 90) {
         System.out.println("Very Good");
     } else {
         System.out.println("Excellent");
