@@ -7,7 +7,40 @@
  */
 
 public class Item3{
-    public static void main(String[] args) {
-        
+    static boolean isStrongNumber(int number){
+        int temp=number;
+        int sumFactorial =0;
+
+        while(temp != 0){
+            int extractNumber = temp % 10; // extract digits
+
+            int factorial = 1; // reset for each digits
+
+            // calculate factorial for each digits
+            for(int i=1; i <= extractNumber; i++){
+                factorial = factorial*i;
+            }
+            
+            sumFactorial = sumFactorial + factorial; // store all the sum
+
+            temp = temp / 10; // for removing last digit
+        }
+
+        if(sumFactorial == number){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {  
+        boolean example_1 = isStrongNumber(145); // true
+        boolean example_2= isStrongNumber(25); // false
+        boolean example_3 = isStrongNumber(1); // true
+
+        System.out.println("\nIs strong number?");
+        System.out.println("145? " + example_1);
+        System.out.println("25? " + example_2);
+        System.out.println("1? " + example_3);
     }
 }
