@@ -30,7 +30,7 @@ public class Item15 {
         intCurrFreq = 1;
       }
     }
-    // ugly...
+    // ugly... just so that its not O(n^2)
     System.out.printf("%d appears %d times/s\n", intNumArr[intArrSize - 1], intCurrFreq);
   }
 }
