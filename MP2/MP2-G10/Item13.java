@@ -5,36 +5,34 @@ public class Item13 {
     BufferedReader buffread = new BufferedReader(new InputStreamReader(System.in));
 
     boolean boolIsValidMatrix = false;
-    String[] strArrMxSize1 = null;
     int intArrM1 = 0;
     int intArrN1 = 0;
 
     while (!boolIsValidMatrix) {
-      System.out.print("Enter matrix 1 size (m x n): ");
-      strArrMxSize1 = buffread.readLine().trim().split(" x ");
-      if (strArrMxSize1.length != 2) continue;
-      intArrM1 = Integer.parseInt(strArrMxSize1[0]);
-      intArrN1 = Integer.parseInt(strArrMxSize1[1]);
+      System.out.print("Enter Matrix 1 size (m x n): ");
+      String[] strArrSize = buffread.readLine().trim().split(" x ");
+      if (strArrSize.length != 2) continue;
+      intArrM1 = Integer.parseInt(strArrSize[0]);
+      intArrN1 = Integer.parseInt(strArrSize[1]);
       boolIsValidMatrix = true;
     }
 
     boolIsValidMatrix = false;
-    String[] strArrMxSize2 = null;
     int intArrN2 = 0;
     int intArrM2 = 0;
 
     while (!boolIsValidMatrix) {
-      System.out.print("Enter matrix 2 size (m x n): ");
-      strArrMxSize2 = buffread.readLine().trim().split(" x ");
-      if (strArrMxSize2.length != 2) continue;
-      intArrM2 = Integer.parseInt(strArrMxSize2[0]);
-      intArrN2 = Integer.parseInt(strArrMxSize2[1]);
+      System.out.print("Enter Matrix 2 size (m x n): ");
+      String[] strArrSize = buffread.readLine().trim().split(" x ");
+      if (strArrSize.length != 2) continue;
+      intArrM2 = Integer.parseInt(strArrSize[0]);
+      intArrN2 = Integer.parseInt(strArrSize[1]);
       if (intArrN1 != intArrM2) continue;
       boolIsValidMatrix = true;
     }
 
     int[][] intMx1 = new int[intArrM1][intArrN1];
-    System.out.println("Enter Elements for matrix 1:");
+    System.out.println("Enter Elements for Matrix 1:");
 
     for (int intI = 0; intI < intArrM1; intI++) {
       boolean boolIsValidInput = false;
@@ -50,7 +48,7 @@ public class Item13 {
     }
 
     int[][] intMx2 = new int[intArrM2][intArrN2];
-    System.out.println("Enter Elements for matrix 2:");
+    System.out.println("Enter Elements for Matrix 2:");
 
     for (int intI = 0; intI < intArrM2; intI++) {
       boolean boolIsValidInput = false;
