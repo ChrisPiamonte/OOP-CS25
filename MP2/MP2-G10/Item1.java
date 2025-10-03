@@ -17,7 +17,7 @@ public class Item1 {
 
   public static boolean isPerfectNumber(int intN) {
     int intSum = 0;
-    for (int intI = 1; intI < intN; intI++) {
+    for (int intI = 1; intI <= intN / 2; intI++) {
       if (intN % intI == 0) {
         intSum += intI;
       }
