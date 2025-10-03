@@ -2,19 +2,18 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class AnagramChecker {
-    public static boolean areAnagrams(String str1, String str2) {
-        str1 = str1.replaceAll("\\s", "").toLowerCase();
-        str2 = str2.replaceAll("\\s", "").toLowerCase();
+    public static boolean areAnagrams(String Str1, String Str2) {
+        Str1 = Str1.replaceAll("\\s", "").toLowerCase();
+        Str2 = Str2.replaceAll("\\s", "").toLowerCase();
 
-        char[] arr1 = str1.toCharArray();
-        char[] arr2 = str2.toCharArray();
+        char[] array1 = str1.toCharArray();
+        char[] array2 = str2.toCharArray();
 
-        Arrays.sort(arr1);
-        Arrays.sort(arr2);
+        Arrays.sort(array1);
+        Arrays.sort(array2);
 
-        return Arrays.equals(arr1, arr2);
-    }
-
+        return Arrays.equals(array1, array2);
+        
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
