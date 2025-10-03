@@ -18,8 +18,6 @@ public class Item13 {
       boolIsValidMatrix = true;
     }
 
-    System.out.printf("%dx%d matrix\n", intArrM1, intArrN1);
-
     boolIsValidMatrix = false;
     String[] strArrMxSize2 = null;
     int intArrN2 = 0;
@@ -34,8 +32,6 @@ public class Item13 {
       if (intArrN1 != intArrM2) continue;
       boolIsValidMatrix = true;
     }
-
-    System.out.printf("%dx%d matrix\n", intArrM2, intArrN2);
 
     int[][] intMx1 = new int[intArrM1][intArrN1];
     System.out.println("Enter Elements for matrix 1:");
@@ -53,13 +49,6 @@ public class Item13 {
       }
     }
 
-    for (int intI = 0; intI < intArrM1; intI++) {
-      for (int intJ = 0; intJ < intArrN1; intJ++) {
-        System.out.print(intMx1[intI][intJ] + " ");
-      }
-      System.out.println();
-    }
-
     int[][] intMx2 = new int[intArrM2][intArrN2];
     System.out.println("Enter Elements for matrix 2:");
 
@@ -74,13 +63,6 @@ public class Item13 {
         }
         boolIsValidInput = true;
       }
-    }
-
-    for (int intI = 0; intI < intArrM2; intI++) {
-      for (int intJ = 0; intJ < intArrN2; intJ++) {
-        System.out.print(intMx2[intI][intJ] + " ");
-      }
-      System.out.println();
     }
 
     int[][] intRsltMx = new int[intArrM1][intArrN2];
