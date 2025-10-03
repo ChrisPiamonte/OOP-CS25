@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MP2 {
+public class Item4 {
     static int intSquares(int intNumber) {
         int intSum = 0, intDigit;
         while (intNumber > 0) {
