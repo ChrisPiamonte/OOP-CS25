@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// Happy Number
 
 public class Item4 {
     static int intSquares(int intNumber) {
