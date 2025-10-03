@@ -12,9 +12,7 @@ public class Item13 {
     while (!boolIsValidMatrix) {
       System.out.print("Enter matrix 1 size (m x n): ");
       strArrMxSize = buffread.readLine().trim().split(" x ");
-      if (strArrMxSize.length != 2) {
-        continue;
-      }
+      if (strArrMxSize.length != 2) continue;
       intArrM = Integer.parseInt(strArrMxSize[0]);
       intArrN = Integer.parseInt(strArrMxSize[1]);
       boolIsValidMatrix = true;
@@ -81,6 +79,24 @@ public class Item13 {
     for (int intI = 0; intI < intArrM1; intI++) {
       for (int intJ = 0; intJ < intArrN1; intJ++) {
         System.out.print(intMx1[intI][intJ] + " ");
+      }
+      System.out.println();
+    }
+
+    int[][] intRsltMx = new int[intArrM][intArrN1];
+
+    for (int intI = 0; intI < intArrM; intI++) {
+      for (int intJ = 0; intJ < intArrN1; intJ++) {
+        for (int intK = 0; intK < intArrN; intK++) {
+          intRsltMx[intI][intJ] += intMx[intI][intK] * intMx1[intK][intJ];
+        }
+      }
+    }
+
+    System.out.println("Result Matrix:");
+    for (int intI = 0; intI < intArrM; intI++) {
+      for (int intJ = 0; intJ < intArrN1; intJ++) {
+        System.out.print(intRsltMx[intI][intJ] + " ");
       }
       System.out.println();
     }
