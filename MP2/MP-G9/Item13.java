@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-public class MatrixMultiplication {
+// Matrix Multiplication
+public class Item13 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the sizes of the two matrices:");
