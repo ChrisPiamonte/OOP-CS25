@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// Prime Factors of a Number
 
 public class Item6 {
 
@@ -8,7 +9,7 @@ public class Item6 {
         System.out.print("Enter a number: ");
         int intNumber = sc.nextInt();
 
-        System.out.print("Prime factors of " + intNumber + " are: ");
+        System.out.print("The prime factors of ["+intNumber+"] are: ");
 
 
         while (intNumber % 2 == 0) {
