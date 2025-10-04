@@ -6,14 +6,14 @@ public class AnagramChecker {
         Str1 = Str1.replaceAll("\\s", "").toLowerCase();
         Str2 = Str2.replaceAll("\\s", "").toLowerCase();
 
-        char[] array1 = str1.toCharArray();
-        char[] array2 = str2.toCharArray();
+        char[] array1 = Str1.toCharArray();
+        char[] array2 = Str2.toCharArray();
 
         Arrays.sort(array1);
         Arrays.sort(array2);
 
         return Arrays.equals(array1, array2);
-        
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
