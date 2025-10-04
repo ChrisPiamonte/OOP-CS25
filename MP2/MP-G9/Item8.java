@@ -13,6 +13,8 @@ public class Item8 {
         int number = scrInput.nextInt();
 
         System.out.println(checkAutomorphic(number) ? "is an automorphic number" : "is not an automorphic number");
+    
+        scrInput.close();
     }
 
     public static boolean checkAutomorphic(int intNumber) {
@@ -25,7 +27,7 @@ public class Item8 {
             intSquare = intSquare / 10;
         }
         return true;
-
+    
     }
 
 }

@@ -28,5 +28,6 @@ public class Item7 {
             }
             else System.out.println("No twin primes within this range");
         }
+        scrInput.close();
     }
 }

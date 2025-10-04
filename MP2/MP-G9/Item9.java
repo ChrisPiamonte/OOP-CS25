@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class StringReversal {
+public class Item9 {
     public static void main(String[] args){
         Scanner scrInput = new Scanner(System.in);
         String strReverse = "";  
@@ -15,5 +15,7 @@ public class StringReversal {
         }
 
         System.out.println("Reversed string: " + strReverse);
+
+        scrInput.close();
     }
 }
