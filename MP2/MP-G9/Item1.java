@@ -7,18 +7,18 @@ public class Item1 {
 
         System.out.println("=== Perfect Number Classifier ===");
         System.out.print("Enter a number: ");
-        int n = console.nextInt();
-        int sum = 0;
-            for (int i = 1; i < n; i++){
-                if (n % i == 0)
+        int intNumber = console.nextInt();
+        int intSum = 0;
+            for (int i = 1; i < intNumber; i++){
+                if (intNumber % i == 0)
                 { 
-                    sum += i;
+                    intSum += i;
                 }
     }
-            if (sum == n){
-                System.out.print(n + " is a perfect number!");
+            if (intSum == intNumber){
+                System.out.print(intNumber + " is a perfect number!");
             } else {
-                System.out.println(n + " is not a perfect number!");
+                System.out.println(intNumber + " is not a perfect number!");
             }
             
         console.close();

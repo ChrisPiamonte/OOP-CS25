@@ -6,12 +6,12 @@ public class Item3 {
 
     System.out.println("=== Strong Number Checker === ");
     System.out.print("Please enter a number: ");
-    int n = console.nextInt();
+    int intNumber = console.nextInt();
 
-    int tempN = n; int sum = 0;
+    int tempN = intNumber; int sum = 0;
     while (tempN > 0){
        int lastDigit = tempN % 10; // get last digit
-       long fact = 1;
+       long longFact = 1;
         for (int i = 1; i <= lastDigit; i++) {
             fact *= i; // factorial of last digit
             sum += fact; // get the sum
@@ -19,10 +19,10 @@ public class Item3 {
         }
     }
     
-    if (n == sum){
-        System.out.println(n + " is a STRONG NUMBER");
+    if (intNumber == sum){
+        System.out.println(intNumber + " is a STRONG NUMBER");
     } else {
-        System.out.println(n + " is NOT a STRONG NUMBER");
+        System.out.println(intNumber + " is NOT a STRONG NUMBER");
     }
     console.close();
     }
