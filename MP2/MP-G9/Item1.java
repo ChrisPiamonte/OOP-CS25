@@ -21,7 +21,7 @@ public class Item1 {
                 System.out.println(n + " is not a perfect number!");
             }
             
-        console.close();    
+        console.close();
     }
 }
 
