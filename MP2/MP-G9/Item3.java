@@ -19,7 +19,7 @@ public class Item3 {
         }
     }
     
-    if (intNumber == sum){`
+    if (intNumber == sum){
         System.out.println(intNumber + " is a STRONG NUMBER");
     } else {
         System.out.println(intNumber + " is NOT a STRONG NUMBER");
