@@ -13,13 +13,13 @@ public class Item3 {
        int lastDigit = tempN % 10; // get last digit
        long longFact = 1;
         for (int i = 1; i <= lastDigit; i++) {
-            fact *= i; // factorial of last digit
-            sum += fact; // get the sum
+            longFact *= i; // factorial of last digit
+            sum += longFact; // get the sum
         tempN /= 10; // remove last digit then proceed to the next iteration
         }
     }
     
-    if (intNumber == sum){
+    if (intNumber == sum){`
         System.out.println(intNumber + " is a STRONG NUMBER");
     } else {
         System.out.println(intNumber + " is NOT a STRONG NUMBER");
