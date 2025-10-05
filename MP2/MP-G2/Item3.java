@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Therefore, 145 is a Strong Number.
  */
 
-public class StrongNumber {
+public class Item3{
     public static void main(String[] args) {
         // Initialize scanners
         Scanner scan = new Scanner(System.in);
