@@ -22,7 +22,7 @@ public class Item6 {
         }
 
         // Factor out odd numbers starting from 3
-        for (int i = 3; i <= Math.sqrt(number); i += 2) {
+        for (int i = 3; i <= number; i += 2) {
             while (number % i == 0) {
                 System.out.print(i + " ");
                 number /= i;
@@ -55,4 +55,5 @@ public class Item6 {
         return value;
     }
 }
+
 
