@@ -2,29 +2,29 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Item10 {
-    public static boolean areAnagrams(String str1, String str2) {
-        str1 = str1.replaceAll("\\s", "").toLowerCase();
-        str2 = str2.replaceAll("\\s", "").toLowerCase();
+    public static boolean areAnagrams(String strFirst, String strSecond) {
+        strFirst = strFirst.replaceAll("\\s", "").toLowerCase();
+        strSecond = strSecond.replaceAll("\\s", "").toLowerCase();
 
-        char[] arr1 = str1.toCharArray();
-        char[] arr2 = str2.toCharArray();
+        char[] arrFirstChar = strFirst.toCharArray();
+        char[] arrSecondChar = strSecond.toCharArray();
 
-        Arrays.sort(arr1);
-        Arrays.sort(arr2);
+        Arrays.sort(arrFirstChar);
+        Arrays.sort(arrSecondChar);
 
-        return Arrays.equals(arr1, arr2);
+        return Arrays.equals(arrFirstChar, arrSecondChar);
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the first string: ");
-        String string1 = scanner.nextLine();
+        String strFirstInput = scanner.nextLine();
 
         System.out.print("Enter the second string: ");
-        String string2 = scanner.nextLine();
+        String strSecondInput = scanner.nextLine();
 
-        if (areAnagrams(string1, string2)) {
+        if (areAnagrams(strFirstInput, strSecondInput)) {
             System.out.println("The strings are anagrams.");
         } else {
             System.out.println("The strings are not anagrams.");
