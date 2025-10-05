@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class mp11 {
+public class Item11 {
 public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     System.out.print("Enter a string: ");

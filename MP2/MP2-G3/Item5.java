@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class mp5 {
+public class Item5 {
     public static void main(String[] args) {
         System.out.print("Input Number: ");
         Scanner scan = new Scanner(System.in);

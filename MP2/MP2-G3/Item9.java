@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class mp9 {
+public class Item9 {
 public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     System.out.print("Enter a string: ");
