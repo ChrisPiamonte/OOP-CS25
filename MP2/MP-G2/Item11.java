@@ -19,11 +19,10 @@ public class Main{
         System.out.println("----- Vowels & Consonants -----\n");
 
         do {
-            // Gets the user input and converted accordingly
             System.out.print("Enter a valid word: ");
-            strOriginalWord = input.nextLine();
-            strConvertedWord = strOriginalWord.toLowerCase();
-            strFinalWord = strConvertedWord.replaceAll("\\s+", "");
+            strOriginalWord = input.nextLine(); // Gets the string input
+            strConvertedWord = strOriginalWord.toLowerCase(); // Turns it into all lowercase
+            strFinalWord = strConvertedWord.replaceAll("\\s+", ""); // "\\s+" is an expression that matches whitespace characters
 
             if (!isValidWord(strConvertedWord)) {
                 System.out.println("Invalid input! Please enter letters only, no symbols or numbers.");
