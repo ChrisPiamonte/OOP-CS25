@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class no3MPOOP
+public class Item10
 {
     static Scanner console = new Scanner(System.in);
     public static void main (String[] args)
@@ -38,4 +38,5 @@ public class no3MPOOP
         }
         return;
     }
+
 }
