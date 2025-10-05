@@ -5,17 +5,41 @@ public class Item15 {
   public static void main(String[] args) throws IOException {
     BufferedReader buffread = new BufferedReader(new InputStreamReader(System.in));
 
-    System.out.print("Enter Number of Elements: ");
-    int intArrSize = Integer.parseInt(buffread.readLine());
+    int intArrSize = 0;
+    while (true) {
+      System.out.print("Enter Number of Elements: ");
 
-    System.out.printf("Enter %d elements:\n", intArrSize);
-    String[] intInputArr = buffread.readLine().split(" ");
+      try {
+      intArrSize = Integer.parseInt(buffread.readLine());
+      }
+      catch (NumberFormatException e) {
+        System.out.println("Please input valid integer");
+      }
 
-    int[] intNumArr = new int[intArrSize];
-
-    for (int intI = 0; intI < intArrSize; intI++) {
-      intNumArr[intI] = Integer.parseInt(intInputArr[intI]);
+      if (intArrSize > 0) {
+        break;
+      }
     }
+
+    int[] intNumArr = null;
+    while (true) {
+      System.out.printf("Enter %d elements:\n", intArrSize);
+
+      String[] intInputArr = buffread.readLine().split(" ");
+      intNumArr = new int[intArrSize];
+
+      try {
+        for (int intI = 0; intI < intArrSize; intI++) {
+          intNumArr[intI] = Integer.parseInt(intInputArr[intI]);
+        }
+      }
+      catch (NumberFormatException e) {
+        System.out.println("Please input valid integers");
+        continue;
+      }
+      break;
+    }
+
 
     Arrays.sort(intNumArr);
 
