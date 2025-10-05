@@ -1,4 +1,4 @@
-import java.util.InputMismatchException;
+import java.util.InputMismatchException;//If the input does not match.
 import java.util.Scanner;
 
 public class Item8{
@@ -23,9 +23,9 @@ public class Item8{
         }
         
         if(isAutomorphic(intNumber)){
-            System.out.println("This number is automorphic.");
+            System.out.println("This number is automorphic.");//Showing this is automorphic
         } else {
-            System.out.println("This number is NOT automorphic.");
+            System.out.println("This number is NOT automorphic.");//If the input is not an automorphic number.
         }
          
     scanner.close();
