@@ -20,10 +20,10 @@ public class Item11 {
         System.out.println("Consonants: " + intConsonantCount);
     }
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scInput = new Scanner(System.in);
         System.out.print("Enter a string: ");
-        String strInput = scanner.nextLine();
+        String strInput = scInput.nextLine();
         countVowelsAndConsonants(strInput);
-        scanner.close();
+        scInput.close();
     }
 }
