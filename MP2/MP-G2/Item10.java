@@ -67,8 +67,9 @@ public class Item10{
             return false;
         }
         // isLetter returns true if each of the characters is a letter
+        // isSpaceChar returns true if there is a space in the sequence
         for (int i = 0; i < strWord.length(); i++) {
-            if (!Character.isLetter(strWord.charAt(i))) {
+            if (!Character.isLetter(strWord.charAt(i)) && !Character.isSpaceChar(strWord.charAt(i))) {
                 return false;
             }
         }
