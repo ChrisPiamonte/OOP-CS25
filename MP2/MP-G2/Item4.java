@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HappyNumber {
+public class Item4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("HAPPY NUMBER CHECKER");
