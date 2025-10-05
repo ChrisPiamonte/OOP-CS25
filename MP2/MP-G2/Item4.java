@@ -4,12 +4,23 @@ public class HappyNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("HAPPY NUMBER CHECKER");
-        System.out.print("Enter a number: ");
-        while (!sc.hasNextInt()) { // Takes user input for menu choice and checks for valid input
-                System.out.print("\tInvalid.\n\tPlease enter a valid choice: ");
-                sc.next(); // Consumes invalid input
+        int intNum;
+        
+        while (true) {
+            System.out.print("Enter a number: ");
+            if (!sc.hasNextInt()) { 
+                System.out.print("\tInvalid.\n\tPlease enter a valid integer.\n");
+                sc.next(); // discard invalid input
+                continue;
             }
-        int intNum = sc.nextInt();
+            intNum = sc.nextInt();
+            
+            if (intNum <= 0) {
+                System.out.print("\tInvalid.\n\tPlease enter a positive integer only.\n");
+                continue;
+            }
+            break; // valid positive integer
+        }
 
         int intResult = intNum;
         while (intResult != 1 && intResult != 4) {
