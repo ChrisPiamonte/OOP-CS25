@@ -4,20 +4,18 @@ public class Item13 {
   public static void main(String[] args) throws IOException {
     BufferedReader buffread = new BufferedReader(new InputStreamReader(System.in));
 
-    boolean boolIsValidMatrix = false;
     int intArrM1 = 0;
     int intArrN1 = 0;
 
-    while (!boolIsValidMatrix) {
+    while (true) {
       System.out.print("Enter Matrix 1 size (m x n): ");
       String[] strArrSize = buffread.readLine().trim().split(" x ");
       if (strArrSize.length != 2) continue;
       intArrM1 = Integer.parseInt(strArrSize[0]);
       intArrN1 = Integer.parseInt(strArrSize[1]);
-      boolIsValidMatrix = true;
+      break;
     }
 
-    boolIsValidMatrix = false;
     int intArrN2 = 0;
     int intArrM2 = 0;
 
@@ -32,8 +30,10 @@ public class Item13 {
     }
 
     int[][] intMx1 = new int[intArrM1][intArrN1];
-    System.out.println("Enter Elements for Matrix 1:");
+    int[][] intMx2 = new int[intArrM2][intArrN2];
+    int[][] intRsltMx = new int[intArrM1][intArrN2];
 
+    System.out.println("Enter Elements for Matrix 1:");
     for (int intI = 0; intI < intArrM1; intI++) {
       while (true) {
         System.out.printf("Row %d: ", intI + 1);
@@ -46,9 +46,7 @@ public class Item13 {
       }
     }
 
-    int[][] intMx2 = new int[intArrM2][intArrN2];
     System.out.println("Enter Elements for Matrix 2:");
-
     for (int intI = 0; intI < intArrM2; intI++) {
       while (true) {
         System.out.printf("Row %d: ", intI + 1);
@@ -60,8 +58,6 @@ public class Item13 {
         break;
       }
     }
-
-    int[][] intRsltMx = new int[intArrM1][intArrN2];
 
     for (int intI = 0; intI < intArrM1; intI++) {
       for (int intJ = 0; intJ < intArrN2; intJ++) {
