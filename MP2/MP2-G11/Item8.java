@@ -18,10 +18,8 @@ public class Item8{
 
         Scanner sc = new Scanner(System.in);
 
-        int intNum = 0;
-
         System.out.print("Enter a number to check: ");
-        intNum = sc.nextInt();
+        int intNum = sc.nextInt();
 
         int intSquare = intNum * intNum;
 

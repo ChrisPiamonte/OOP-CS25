@@ -20,19 +20,16 @@ public class Item7 {
             }
         }
     }
-    
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        int intMin = 0;
-        int intMax = 0;
-
         System.out.print("Enter minimum range: ");
-        intMin = sc.nextInt();
+        int intMin = sc.nextInt();
 
         System.out.print("Enter maximum range: ");
-        intMax = sc.nextInt();
+        int intMax = sc.nextInt();
 
         System.out.printf("Twin primes between %d and %d are: \n", intMin, intMax);
         twinPrimes(intMin, intMax);
