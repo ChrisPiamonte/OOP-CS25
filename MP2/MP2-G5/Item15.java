@@ -1,7 +1,6 @@
-package OOPM2;
 import java.util.Scanner;
 
-public class no15 {
+public class Item15 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
