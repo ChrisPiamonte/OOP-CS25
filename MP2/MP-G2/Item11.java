@@ -7,7 +7,7 @@ import java.util.Scanner;
  * The word contains 5 vowels and 6 consonants.
  */
 
-public class Main{
+public class Item11{
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
