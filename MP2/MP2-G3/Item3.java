@@ -26,11 +26,7 @@ public class Item3{
             temp = temp / 10; // for removing last digit
         }
 
-        if(sumFactorial == number){
-            return true;
-        } else{
-            return false;
-        }
+        return (sumFactorial == number);
     }
 
     public static void main(String[] args) {  
@@ -38,7 +34,7 @@ public class Item3{
         boolean example_2= isStrongNumber(25); // false
         boolean example_3 = isStrongNumber(1); // true
 
-        System.out.println("\nIs strong number?");
+        System.out.println("Is strong number?");
         System.out.println("145? " + example_1);
         System.out.println("25? " + example_2);
         System.out.println("1? " + example_3);

@@ -32,11 +32,7 @@ public class Item8 {
         }
 
         // if the checker is still 1, then the ends are similar
-        if (checker == 1){
-            return true;
-        } else{
-            return false;
-        }
+        return (checker == 1);
 
         // it's ugly, yet it works ;-;;
     }
@@ -48,7 +44,7 @@ public class Item8 {
         boolean example_4 = isAutomorphic(64); // false
         boolean example_5 = isAutomorphic(376); // true
 
-        System.out.println("\nIs automorphic number?");
+        System.out.println("Is automorphic number?");
         System.out.println("76? " + example_1);
         System.out.println("25? " + example_2);
         System.out.println("49? " + example_3);

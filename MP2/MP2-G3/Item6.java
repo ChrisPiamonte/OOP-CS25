@@ -12,7 +12,7 @@ public class Item6 {
         // Using Scanner
         Scanner objScanner = new Scanner(System.in);
 
-        System.out.println("\nProgram to Display a Number's Prime Factors\n");
+        System.out.println("Program to Display a Number's Prime Factors");
 
         //get input from user
         System.out.print("Enter a number: ");
