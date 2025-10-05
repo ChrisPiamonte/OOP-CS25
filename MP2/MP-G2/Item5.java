@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Therefore, 45 is a Kaprekar number.
  * */
 
-public class Kaprekar{
+public class Item5{
     public static void main(String[] args) {
         // Initialize scanner
         Scanner scan = new Scanner(System.in);
