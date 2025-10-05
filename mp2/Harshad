@@ -1,1 +1,38 @@
+import java.util.*;
 
+public class Harshad{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        int intn = 0;
+        boolean valid = false;
+
+        while (!valid) { 
+            System.out.print("Enter an integer: ");
+            if (sc.hasNextInt()) {
+                intn = sc.nextInt();
+                valid = true; 
+            } else {
+                System.out.println("Invalid input! Please enter an integer only.");
+                sc.next(); 
+            }
+        } //loops the input section until the user puts an integer
+
+        int placeHolder = intn;
+        int sum = 0;
+
+        while(placeHolder > 0){
+            int lastDigit = placeHolder % 10;
+            sum += lastDigit;
+            placeHolder = placeHolder / 10;
+        } //adds every digit from the right side to the sum and remove it until there are no numbers left
+
+
+        if(intn % sum == 0){
+            System.out.println("Your number is a HARSHAD number.");
+        }
+        else{
+            System.out.println("Your number is NOT a HARSHAD number.");
+        }
+    }
+}
