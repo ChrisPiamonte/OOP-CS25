@@ -24,5 +24,6 @@ public class WordCount {
         // Count words
         String[] strWords = strSentence.split("\\s+");
         System.out.println(" Word count: " + strWords.length);
+        System.out.println("Program Ended Succesfully.");
     }
 }
