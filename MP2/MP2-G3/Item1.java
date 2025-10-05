@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class no1MPOOP
+public class Item1
 {
     static Scanner console = new Scanner(System.in);
     public static void main (String[] args)
@@ -31,4 +31,5 @@ public class no1MPOOP
         }
         return;
     }
+
 }
