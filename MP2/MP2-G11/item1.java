@@ -20,6 +20,5 @@ public class Item1 {
             System.out.println(num + " is not a perfect number.");
         }
         input.close();
-
     }
 }
