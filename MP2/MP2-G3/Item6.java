@@ -14,21 +14,29 @@ public class Item6 {
 
         System.out.println("Program to Display a Number's Prime Factors");
 
-        //get input from user
+        // get input from user
         System.out.print("Enter a number: ");
+
+        // Ensure only integer input
+        while (!objScanner.hasNextInt()) {
+            System.out.println("Invalid input! Please enter an integer.");
+            System.out.print("Enter a number: ");
+            objScanner.next(); // clear invalid input
+        }
+
         int number = objScanner.nextInt();
 
-        int intI =2;
+        int intI = 2;
 
-        while (intI * intI <= number){
-            while (number % intI == 0){
-                System.out.print(intI+ " ");
+        while (intI * intI <= number) {
+            while (number % intI == 0) {
+                System.out.print(intI + " ");
                 number = number / intI;
             }
             intI = intI + 1;
         }
-        
-        if(number > 1){
+
+        if (number > 1) {
             System.out.print(number + " ");
         }
 

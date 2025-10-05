@@ -13,6 +13,14 @@ public class Item4 {
          Scanner scanner = new Scanner(System.in);
 
          System.out.print("Please enter a number: ");
+         
+         //Ensure only integer input
+         while (!scanner.hasNextInt()) {
+             System.out.println("Invalid input! Please enter an integer.");
+             System.out.print("Please enter a number: ");
+             scanner.next(); // clear invalid input
+         }
+
          int intNum = scanner.nextInt();
 
          if(boolIsHappyNumber(intNum)){

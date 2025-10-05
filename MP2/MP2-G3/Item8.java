@@ -5,6 +5,8 @@
  * square ends with the number itself (e.g., 76^2 = 5776).
  */
 
+import java.util.Scanner;
+
 public class Item8 {
     static boolean isAutomorphic(int number){
         int square = number * number;
@@ -19,7 +21,7 @@ public class Item8 {
             extractNumber = number % 10; 
             extractSquare = square % 10;
 
-            // checks if the extracted numbers are similar, if not, var checker will eqaul to 0
+            // checks if the extracted numbers are similar, if not, var checker will equal to 0
             if(extractNumber != extractSquare){
                 checker = 0;
                 break; 
@@ -34,21 +36,29 @@ public class Item8 {
         // if the checker is still 1, then the ends are similar
         return (checker == 1);
 
-        // it's ugly, yet it works ;-;;
+        // it's ugly, yet it works ;-; ;
     }
 
     public static void main(String[] args) {
-        boolean example_1 = isAutomorphic(76); // true
-        boolean example_2 = isAutomorphic(25); // true
-        boolean example_3 = isAutomorphic(49); // flase
-        boolean example_4 = isAutomorphic(64); // false
-        boolean example_5 = isAutomorphic(376); // true
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Is automorphic number?");
-        System.out.println("76? " + example_1);
-        System.out.println("25? " + example_2);
-        System.out.println("49? " + example_3);
-        System.out.println("64? " + example_4);
-        System.out.println("376? "+ example_5);
+        System.out.print("Enter a number: ");
+
+        //Ensure only integer input
+        while (!scanner.hasNextInt()) {
+            System.out.println("Invalid input! Please enter an integer.");
+            System.out.print("Enter a number: ");
+            scanner.next(); // clear invalid input
+        }
+
+        int number = scanner.nextInt();
+
+        if (isAutomorphic(number)) {
+            System.out.println(number + " is an Automorphic Number!");
+        } else {
+            System.out.println(number + " is NOT an Automorphic Number.");
+        }
+
+        scanner.close();
     }
 }

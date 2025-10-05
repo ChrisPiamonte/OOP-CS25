@@ -5,6 +5,13 @@ public class Item5 {
         System.out.print("Input Number: ");
         Scanner scan = new Scanner(System.in);
 
+        //Ensure only valid long input
+        while (!scan.hasNextLong()) {
+            System.out.println("Invalid input! Please enter a whole number.");
+            System.out.print("Input Number: ");
+            scan.next(); // clear invalid input
+        }
+
         long num = scan.nextLong();
         long squared = num * num; 
         String str = Long.toString(squared);
@@ -19,7 +26,6 @@ public class Item5 {
                 break;
             }
         }
-
         if (isKaprekar)
             System.out.printf("%d is a Kaprekar Number", num);
         else
