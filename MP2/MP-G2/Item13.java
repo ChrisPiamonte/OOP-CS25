@@ -11,7 +11,7 @@ public class Item13 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Get matrix dimensions
+        // Get the matrix dimensions
         System.out.print("Enter the number of rows and columns for Matrix A: ");
         int rowsA = scanner.nextInt();
         int colsA = scanner.nextInt();
@@ -39,7 +39,7 @@ public class Item13 {
         scanner.close();
     }
 
-    // Method to input elements of the matrix
+    // Method to input the elements of the matrix
     static int[][] inputMatrix(Scanner scanner, int rows, int cols, String name) {
         int[][] matrix = new int[rows][cols];
         System.out.println("Enter elements for Matrix " + name + ":");
@@ -64,7 +64,7 @@ public class Item13 {
         return result;
     }
 
-    // Method to print a matrix
+    // Method to print the product
     static void printMatrix(int[][] matrix) {
         System.out.println("Resulting Matrix:");
         for (int[] row : matrix) {
@@ -73,4 +73,5 @@ public class Item13 {
             System.out.println();
         }
     }
+
 }
