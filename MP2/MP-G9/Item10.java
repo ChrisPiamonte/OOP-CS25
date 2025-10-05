@@ -16,13 +16,13 @@ public class Item10 {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scInput = new Scanner(System.in);
 
         System.out.print("Enter the first string: ");
-        String strFirstInput = scanner.nextLine();
+        String strFirstInput = scInput.nextLine();
 
         System.out.print("Enter the second string: ");
-        String strSecondInput = scanner.nextLine();
+        String strSecondInput = scInput.nextLine();
 
         if (areAnagrams(strFirstInput, strSecondInput)) {
             System.out.println("The strings are anagrams.");
@@ -30,6 +30,6 @@ public class Item10 {
             System.out.println("The strings are not anagrams.");
         }
 
-        scanner.close();
+        scInput.close();
     }
 }
