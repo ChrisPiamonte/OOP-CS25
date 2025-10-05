@@ -14,22 +14,30 @@ public class Item5{
         Scanner scan = new Scanner(System.in);
 
         // Standard Variables
+        long longUserInput = 0;
+
         System.out.print("Enter a number: ");
-        while(!scan.hasNextInt()) {
-            System.out.print("Please enter a valid number: ");
-            scan.nextLine();
+        while (true) {
+            while (!scan.hasNextLong()) { // Non-numbers input
+                System.out.print("Please enter a valid number: ");
+                scan.nextLine();
+            }
+            longUserInput = scan.nextLong();
+            if (longUserInput < 0) { // Negative numbers
+                System.out.print("Please enter a valid number: ");
+                scan.nextLine();
+                continue;
+            }
+            break; 
         }
-        int intNumber = scan.nextInt();
-        int intSum = stringConversion(intNumber); // Calls method to convert to String
+        long longSum = stringConversion(longUserInput); // Calls method to convert to String
 
         // Output sum
-        System.out.println(intSum);
+        System.out.println(longSum);
 
         // Checks if Kaprekar
-        if (intSum == intNumber) {
+        if (longSum == longUserInput) {
             System.out.println("This is a Kaprekar number.");
-        } else if (intSum <= 0) {
-            System.out.println("This is not a Kaprekar number.");
         } else {
             System.out.println("This is not a Kaprekar number.");
         }
@@ -38,22 +46,22 @@ public class Item5{
         scan.close();
     }
 
-    public static int stringConversion(int input) {
+    public static long stringConversion(long input) {
         // Standard variables
-        int intSquare = input * input;
+        long longSquare = input * input;
         int sum = 0;
 
         // String conversion
-        String strResult = String.valueOf(intSquare);
-        int intLength = strResult.length(); // Gets length
+        String strResult = String.valueOf(longSquare);
+        int length = strResult.length(); // Gets length
         
         // Sum calculation
-        if (intLength > 1) { // Checks if theres more than 1 digit
-            String strLeft = strResult.substring(0, intLength/2); 
-            String strRight = strResult.substring(intLength/2);
+        if (length > 1) { // Checks if theres more than 1 digit
+            String strLeft = strResult.substring(0, length/2);
+            String strRight = strResult.substring(length/2);
             return sum = Integer.valueOf(strLeft) + Integer.valueOf(strRight);
         } else {
-            return sum += intSquare; // Else, return as it is
+            return sum += longSquare; // Else, return as it is
         }
     }
 }
