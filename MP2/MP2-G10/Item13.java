@@ -21,29 +21,28 @@ public class Item13 {
     int intArrN2 = 0;
     int intArrM2 = 0;
 
-    while (!boolIsValidMatrix) {
+    while (true) {
       System.out.print("Enter Matrix 2 size (m x n): ");
       String[] strArrSize = buffread.readLine().trim().split(" x ");
       if (strArrSize.length != 2) continue;
       intArrM2 = Integer.parseInt(strArrSize[0]);
       intArrN2 = Integer.parseInt(strArrSize[1]);
       if (intArrN1 != intArrM2) continue;
-      boolIsValidMatrix = true;
+      break;
     }
 
     int[][] intMx1 = new int[intArrM1][intArrN1];
     System.out.println("Enter Elements for Matrix 1:");
 
     for (int intI = 0; intI < intArrM1; intI++) {
-      boolean boolIsValidInput = false;
-      while (!boolIsValidInput) {
+      while (true) {
         System.out.printf("Row %d: ", intI + 1);
         String[] strArrTemp = buffread.readLine().trim().split(" ");
         if (strArrTemp.length != intArrN1) continue;
         for (int intJ = 0; intJ < intArrN1; intJ++) {
           intMx1[intI][intJ] = Integer.parseInt(strArrTemp[intJ]);
         }
-        boolIsValidInput = true;
+        break;
       }
     }
 
@@ -51,15 +50,14 @@ public class Item13 {
     System.out.println("Enter Elements for Matrix 2:");
 
     for (int intI = 0; intI < intArrM2; intI++) {
-      boolean boolIsValidInput = false;
-      while (!boolIsValidInput) {
+      while (true) {
         System.out.printf("Row %d: ", intI + 1);
         String[] strArrTemp = buffread.readLine().trim().split(" ");
         if (strArrTemp.length != intArrN2) continue;
         for (int intJ = 0; intJ < intArrN2; intJ++) {
           intMx2[intI][intJ] = Integer.parseInt(strArrTemp[intJ]);
         }
-        boolIsValidInput = true;
+        break;
       }
     }
 
