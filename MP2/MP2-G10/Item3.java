@@ -24,15 +24,27 @@ public class Item3 {
 
   public static void main (String[] args) {
     Scanner sc = new Scanner(System.in);
-    System.out.print("Hello!, Please enter a number: ");
-    int intNumber = sc.nextInt();
+
+    int intNumber = 0;
+    while (true) {
+      System.out.print("Hello! Please enter a number: ");
+
+      if (sc.hasNextInt()) {
+        intNumber = sc.nextInt();
+
+        if (intNumber > 0) {
+          break;
+        }
+      }
+      sc.next();
+    }
 
     if (digit (intNumber) == intNumber) {
       System.out.println(intNumber + " is a Strong Number");
     }
 
     else {
-      System.out.println(  intNumber + " is not strong number" );
+      System.out.println(intNumber + " is not strong number" );
     }
 
     sc.close();

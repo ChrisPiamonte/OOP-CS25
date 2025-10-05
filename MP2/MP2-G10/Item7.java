@@ -4,11 +4,31 @@ public class Item7 {
   public static void main (String[] args) {
     Scanner sc = new Scanner(System.in);
 
-    System.out.print("Please enter the lower limit: ");
-    int intLowerLimit = sc.nextInt();
+    int intLowerLimit = 0;
+    while (true) {
+      System.out.print("Please enter the lower limit: ");
+      if (sc.hasNextInt()) {
+        intLowerLimit = sc.nextInt();
 
-    System.out.print(" Please enter the upper limit: ");
-    int intUpperLimit = sc.nextInt();
+        if (intLowerLimit > 0) {
+          break;
+        }
+      }
+      sc.next();
+    }
+
+    int intUpperLimit = 0;
+    while (true) {
+      System.out.print(" Please enter the upper limit: ");
+      if (sc.hasNextInt()) {
+        intUpperLimit = sc.nextInt();
+        
+        if (intUpperLimit > 0) {
+          break;
+        }
+      }
+      sc.next();
+    }
     sc.close();
 
     System.out.println("Here are the twin prime numbers between " + intLowerLimit + " and " + intUpperLimit);

@@ -1,10 +1,22 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Item5 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    System.out.print("Input a number: ");
-    int intNum = sc.nextInt();
+
+    int intNum = 0;
+    while (true) {
+      System.out.print("Input a number: ");
+
+      if (sc.hasNextInt()) {
+        intNum = sc.nextInt();
+
+        if (intNum > 0) {
+          break;
+        }
+      }
+      sc.next();
+    }
     sc.close();
 
     long longSquare = (long) Math.pow(intNum, 2);
