@@ -6,7 +6,7 @@ public class Problem15_ArrayFrequency {
         System.out.println("FREQUENCY NUMBER GENERATOR");
         System.out.print("Enter number of elements: ");
         while (!sc.hasNextInt()) { 
-                System.out.print("\tInvalid.\n\tPlease enter a valid choice: ");
+                System.out.print("\tInvalid.\n\tPlease enter a valid number: ");
                 sc.next(); 
             }
         int intNum = sc.nextInt();
@@ -16,7 +16,7 @@ public class Problem15_ArrayFrequency {
         System.out.println("Enter elements:");
         for (int i = 0; i < intNum; i++){ 
         while (!sc.hasNextInt()) { 
-                System.out.print("\tInvalid.\n\tPlease enter a valid choice: ");
+                System.out.print("\tInvalid.\n\tPlease enter a valid number: ");
                 sc.next(); 
             }
         intArr[i] = sc.nextInt();
