@@ -11,8 +11,7 @@ public class Item6 {
         Scanner scanner = new Scanner(System.in);
 
         //Input of a number to be factored
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
+        int number = inputInt(scanner, "Enter a positive number: ");
 
         System.out.print("The prime factors of " + number + " are: ");
 
@@ -22,7 +21,7 @@ public class Item6 {
             number /= 2;
         }
 
-        // Factor out the odd numbers starting from 3
+        // Factor out odd numbers starting from 3
         for (int i = 3; i <= Math.sqrt(number); i += 2) {
             while (number % i == 0) {
                 System.out.print(i + " ");
@@ -37,5 +36,22 @@ public class Item6 {
 
         scanner.close();
     }
-
+    // Method for input and error handling
+    public static int inputInt (Scanner scanner, String text) {
+        int value = -1;
+        while (value <= 0) {
+            System.out.print(text);
+            if (scanner.hasNextInt()) {
+                value = scanner.nextInt();
+                if (value <= 0) {
+                    System.out.println("Invalid input. Enter a number greater than zero.");
+                }
+            }    
+                else {
+                    System.out.println("Invalid input. Enter a valid postive number.");
+                    scanner.next();
+                }                
+        }
+        return value;
+    }
 }
