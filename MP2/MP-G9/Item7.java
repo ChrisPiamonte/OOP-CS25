@@ -15,6 +15,7 @@ public class Item7 {
     public static void main(String[] args) {
         Scanner scrInput = new Scanner(System.in);
         int intRange;
+        int intRangechecker =0;
         System.out.print("Enter a range: ");
         while (!scrInput.hasNextInt()) {
             System.out.println("Invalid input! Please enter an integer.");
@@ -25,9 +26,13 @@ public class Item7 {
         for (int i = 0; i < intRange; i++) {
             if (checkPrime(i) && checkPrime(i + 2)) {
                 System.out.print("(" + i + "," + (i + 2) + ") ");
+                intRangechecker++;
             }
-            else System.out.println("No twin primes within this range");
+        }
+        if(intRangechecker == 0){
+            System.out.println("No Twin Prime Exists within the Range");
         }
         scrInput.close();
+        
     }
 }
