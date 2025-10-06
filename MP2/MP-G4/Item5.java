@@ -3,9 +3,19 @@ import java.util.Scanner;
 public class Item5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Enter a number: ");
-        int number = scanner.nextInt();
+        int number;
+
+        // Ask user for a positive number input
+        while (true) { 
+            System.out.print("Enter a number: ");
+            number = scanner.nextInt();
+
+            if (number > 0) {
+                break;
+            }
+
+            System.out.println("Invalid Input. Must be positive number.");
+        }
 
         if (isKaprekarNumber(number)) {
             System.out.println(number + " is a Kaprekar number");
