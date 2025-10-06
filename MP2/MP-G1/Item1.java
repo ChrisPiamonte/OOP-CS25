@@ -21,12 +21,12 @@ public class Item1{
             break; 
         }
 
-        int intSum = 0;
+        int sumDivisors = 0;
         for (int i = 1; i <= intNum / 2; i++) {
             if (intNum % i == 0) 
-                intSum += i;
+                sumDivisors += i;
         }  
-            if(intSum == intNum){
+            if(sumDivisors == intNum){
                 System.out.println(intNum + " is a perfect number.");
             } else {
                 System.out.println(intNum + " is not a perfect number.");
