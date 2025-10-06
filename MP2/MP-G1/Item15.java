@@ -17,9 +17,10 @@ public class Item15 {
         int[] intArr = new int[intNum];
         boolean[] boolVisited = new boolean[intNum];
 
-        System.out.println("Enter elements:");
-        for (int i = 0; i < intNum; i++){ 
-        while (!sc.hasNextInt()) { 
+        System.out.println("{Enter elements}");
+        for (int i = 0; i < intNum; i++){
+            System.out.printf("Element %d: ", i+1);
+            while (!sc.hasNextInt()) { 
                 System.out.print("\tInvalid.\n\tPlease enter a valid number: ");
                 sc.next(); 
             }
