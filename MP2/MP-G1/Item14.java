@@ -1,3 +1,5 @@
+// Item 14: The program accepts a double matrix from the user and transposes it. A transposed matrix switches the original matrix's rows and columns. 
+ 
 import java.util.*;
 
 public class Item14 {

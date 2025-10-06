@@ -1,3 +1,5 @@
+// Item 2: The program accepts a positive integer input and checks whether a given number is a Harshad Number. A Harshad Number is an integer that is divisible by the sum of its digits.
+
 import java.util.*;
 
 public class Item2 {
