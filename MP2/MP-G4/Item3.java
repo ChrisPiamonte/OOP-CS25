@@ -3,21 +3,21 @@ import java.util.Scanner;
 public class Item3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int n;
+        int number;
         
         // Ask user for a positive number input
         while (true) { 
             System.out.print("Enter a number: ");
-            n = scan.nextInt();
+            number = scan.nextInt();
 
-            if (n > 0) {
+            if (number > 0) {
                 break;
             }
 
             System.out.println("Invalid Input. Must be positive number.");
         }
 
-        int temp = n, sum = 0;
+        int temp = number, sum = 0;
         while (temp > 0) {
             int digit = temp % 10;
             int fact = 1;
@@ -27,10 +27,10 @@ public class Item3 {
             temp /= 10;
         }
 
-        if (sum == n) {
-            System.out.println(n + " is a Strong Number.");
+        if (sum == number) {
+            System.out.println(number + " is a Strong Number.");
         } else {
-            System.out.println(n + " is not a Strong Number.");
+            System.out.println(number + " is not a Strong Number.");
         }
             
         scan.close();
