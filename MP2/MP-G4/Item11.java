@@ -19,7 +19,7 @@ public class Item11 {
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            if (isVowel(ch)) {
                 vowelCount++;
             }
         }
@@ -32,11 +32,15 @@ public class Item11 {
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (!(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')) {
+            if ((ch >= 'a' && ch <= 'z') && !isVowel(ch)) {
                 consonantCount++;
             }
         }
 
         return consonantCount;
-    }    
+    }
+    
+    public static boolean isVowel(char ch) {
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
 }
