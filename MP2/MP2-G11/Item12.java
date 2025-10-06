@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class WordCounter {
+public class Item12 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
