@@ -14,14 +14,14 @@ public class Item7{
 
         // Standard variables
         long longRange = 0;
-        System.out.print("Enter a number: ");
+        System.out.print("Enter a positive number: ");
         while (true) {
             while (!scan.hasNextLong()) { // Non-numbers input
                 System.out.print("Please enter a valid number: ");
                 scan.nextLine();
             }
             longRange = scan.nextLong();
-            if (longRange < 0) { // Negative numbers
+            if (longRange <= 0) { // Negative numbers
                 System.out.print("Please enter a valid number: ");
                 scan.nextLine();
                 continue;
