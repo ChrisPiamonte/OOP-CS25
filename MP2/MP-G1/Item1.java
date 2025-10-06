@@ -5,30 +5,20 @@ public class Item1{
         Scanner scanner = new Scanner(System.in); //Scanner object
         int intNum = 0;
 
-        for(;;){//Infinite loop for invalid inputs until the input is true
+        while(true){//Infinite loop for invalid inputs until the input is true
             System.out.print("Enter a positive integer only: ");
-            String inputNum = scanner.nextLine(); //Becomes a string first
-            boolean isNumeric = true; 
-            //checks if the input is numerical
-            for(int i = 0;  i < inputNum.length(); i++){
-                if(!Character.isDigit(inputNum.charAt(i))){
-                    isNumeric = false;//this will turn out false
-                    break;
+
+             if (scanner.hasNextInt()){
+                intNum = scanner.nextInt();
+
+                if(intNum > 0){
+                    break; //Exit infinite loops
+                } else {
+                    System.out.print("Enter a positive integer only: ");//Ask it again
                 }
-            }
-
-            if(!isNumeric || inputNum.equals("")){
-                System.out.println("Invalid input. Please enter a number only.");
-                continue;//This will ask the user to input again
-            }
-
-            intNum = Integer.parseInt(inputNum); //CTurns into an integer
-            
-            if(intNum <= 0){//Check if the input is a positive integer or not.
-                System.out.println("Zero/negative integers not allowed. Please enter a positive integer.");
-                continue;
             } else {
-                break;//If the user enters a valid integer, exits loop
+                System.out.println("Input invalid. Enter numbers only");
+                scanner.next(); //discard invalid inputs from the user
             }
         }
             
