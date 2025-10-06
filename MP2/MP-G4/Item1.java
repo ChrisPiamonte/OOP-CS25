@@ -3,13 +3,25 @@ import java.util.Scanner;
 public class Item1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int n = scan.nextInt();
+        int n;
+
+        // Ask user for a positive number input
+        while (true) { 
+            System.out.print("Enter a number: ");
+            n = scan.nextInt();
+
+            if (n > 0) {
+                break;
+            }
+
+            System.out.println("Invalid Input. Must be positive number.");
+        }
 
         int sum = 0;
         for (int i = n / 2; i > 0; i--) {
-            if (n % i == 0)
+            if (n % i == 0) {
                 sum += i;
+            }
         }
 
         if (sum == n) {
