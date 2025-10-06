@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/*"Happy Number" 
+Create a program that checks if a number is a Happy Number. 
+A Happy Number is a number that eventually reaches 1 when repeatedly replaced by the sum of the squares of its digits. 
+If it loops endlessly, it is not a Happy Number.*/
+
 public class Item4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
