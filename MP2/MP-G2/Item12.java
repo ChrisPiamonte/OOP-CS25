@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/*"Word Count in a Sentence"
+Ask the user to input a sentence and count how many words it contains.*/
+
 public class Item12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -24,6 +27,7 @@ public class Item12 {
         // Count words
         String[] strWords = strSentence.split("\\s+");
         System.out.println(" Word count: " + strWords.length);
+        sc.close();
         System.out.println("Program Ended Succesfully.");
     }
 }
