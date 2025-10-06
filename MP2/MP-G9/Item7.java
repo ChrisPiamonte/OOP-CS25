@@ -14,21 +14,37 @@ public class Item7 {
 
     public static void main(String[] args) {
         Scanner scrInput = new Scanner(System.in);
-        int intRange;
+        int intminRange;
+        int intmaxRange;
         int intRangechecker =0;
-        System.out.print("Enter a range: ");
+        do{
+        System.out.print("Enter a minimum range: ");
         while (!scrInput.hasNextInt()) {
             System.out.println("Invalid input! Please enter an integer.");
             scrInput.next();
-            System.out.print("Enter a range: ");
+            System.out.print("Enter a minimum range: ");
         }
-        intRange = scrInput.nextInt();
-        for (int i = 0; i < intRange; i++) {
+        intminRange = scrInput.nextInt();
+        System.out.print("Enter a maximum range: ");
+        while (!scrInput.hasNextInt()) {
+            System.out.println("Invalid input! Please enter an integer.");
+            scrInput.next();
+            System.out.print("Enter a maximum range: ");
+        }
+        intmaxRange = scrInput.nextInt();
+
+        if(intminRange > intmaxRange){
+            System.out.println("Minimum range cannot be greater than maximum range. Try again!");
+        }
+    }while(intminRange > intmaxRange);
+
+        for (int i = intminRange; i < intmaxRange; i++) {
             if (checkPrime(i) && checkPrime(i + 2)) {
                 System.out.print("(" + i + "," + (i + 2) + ") ");
                 intRangechecker++;
             }
         }
+       
         if(intRangechecker == 0){
             System.out.println("No Twin Prime Exists within the Range");
         }
