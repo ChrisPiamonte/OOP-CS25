@@ -15,7 +15,7 @@ public class Item15 {
             }
         int intNum = sc.nextInt();
         int[] intArr = new int[intNum];
-        boolean[] blnVisited = new boolean[intNum];
+        boolean[] boolVisited = new boolean[intNum];
 
         System.out.println("Enter elements:");
         for (int i = 0; i < intNum; i++){ 
@@ -27,13 +27,13 @@ public class Item15 {
         }
         
         for (int i = 0; i < intNum; i++) {
-            if (blnVisited[i]) 
+            if (boolVisited[i]) 
                 continue;
             
             int intCount = 1;
             for (int j = i + 1; j < intNum; j++) {
                 if (intArr[i] == intArr[j]) {
-                    blnVisited[j] = true;
+                    boolVisited[j] = true;
                     intCount++;
                 }
             }
