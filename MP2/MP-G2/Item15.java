@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/*"Frequency of Elements in an Array"
+Write a program that accepts n numbers into an array and counts how many times each number
+appears. Display the frequency of each element.*/
+
 public class Item15 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -35,6 +39,7 @@ public class Item15 {
             }
             System.out.println(intArr[i] + " appears " + intCount + " times");
         }
+        sc.close();
         System.out.println("Program Ended Succesfully.");
     }
 }
