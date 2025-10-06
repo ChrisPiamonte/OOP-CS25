@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;//If the input does not match.
 import java.util.Scanner;
 
 public class Item8{
@@ -11,12 +10,12 @@ public class Item8{
             System.out.print("Please enter a positive integer: ");
             try {
                 intNumber = scanner.nextInt();
-                if(intNumber <= 0){
+                if(intNumber < 0){
                     System.out.println("Please enter a positive integer again.");
                 } else {
                     correctInput = true;//Input must be correct here
                 }
-            } catch (InputMismatchException e) {
+            } catch (Exception e) {
                 System.out.println("Invalid input. Please enter a positive number.");
                 scanner.next();//Prevents infinite loop.
             }
