@@ -12,13 +12,11 @@ public class Item13 {
         Scanner scanner = new Scanner(System.in);
 
         // Get the matrix dimensions
-        System.out.print("Enter the number of rows and columns for Matrix A: ");
-        int rowsA = scanner.nextInt();
-        int colsA = scanner.nextInt();
+        int rowsA = inputNum(scanner, "Enter the number of rows for Matrix A: ");
+        int colsA = inputNum(scanner, "Enter the number of columns for Matrix A: ");
 
-        System.out.print("Enter the number of rows and columns for Matrix B: ");
-        int rowsB = scanner.nextInt();
-        int colsB = scanner.nextInt();
+        int rowsB = inputNum(scanner, "Enter the number of rows for Matrix B: ");
+        int colsB = inputNum(scanner, "Enter the number of columns for Matrix B: ");
 
         /* Error check for initialization of the dimensions.
         *  The number of columns in matrix A must be equal to the number of rows in matrix B.
@@ -65,7 +63,7 @@ public class Item13 {
     }
 
     // Method to print the product
-    static void printMatrix(int[][] matrix) {
+    public static void printMatrix(int[][] matrix) {
         System.out.println("Resulting Matrix:");
         for (int[] row : matrix) {
             for (int val : row)
@@ -73,5 +71,23 @@ public class Item13 {
             System.out.println();
         }
     }
-
+    
+    // Input 
+    public static int inputNum (Scanner scan, String text) {
+        int intUserInput;
+        System.out.print(text);
+        while (true) {
+            while (!scan.hasNextInt()) { // Non-numbers input
+                System.out.print("Please enter a valid number: ");
+                scan.next();
+            }
+            intUserInput = scan.nextInt();
+            if (intUserInput <= 0) { // Negative numbers and zero
+                System.out.print("Please enter a positive number: ");
+                continue;
+            }
+            break; 
+        }
+        return intUserInput;
+    }
 }
