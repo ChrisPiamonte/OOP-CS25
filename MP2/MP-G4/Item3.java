@@ -3,8 +3,19 @@ import java.util.Scanner;
 public class Item3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int n = scan.nextInt();
+        int n;
+        
+        // Ask user for a positive number input
+        while (true) { 
+            System.out.print("Enter a number: ");
+            n = scan.nextInt();
+
+            if (n > 0) {
+                break;
+            }
+
+            System.out.println("Invalid Input. Must be positive number.");
+        }
 
         int temp = n, sum = 0;
         while (temp > 0) {
