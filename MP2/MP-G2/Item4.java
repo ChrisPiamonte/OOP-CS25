@@ -37,6 +37,7 @@ public class Item4 {
         } else {
             System.out.println(intNum + " is NOT a Happy Number.");
         }
+        sc.close();
         System.out.println("Program Ended Succesfully.");
     }
 
