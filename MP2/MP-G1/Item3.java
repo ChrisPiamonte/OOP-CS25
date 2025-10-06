@@ -20,7 +20,7 @@ public class Item3{
         long longSumOfDigits = 0;
        
         // Get last digit, factorial each.
-        System.out.print("Enter a number: ");
+        System.out.print("Enter a positive number: ");
 
         // Repeats until user enters a valid number
         while (true) {
@@ -29,7 +29,7 @@ public class Item3{
                 scan.nextLine();
             }
             longUserInput = scan.nextLong();
-            if (longUserInput < 0) { // Negative numbers
+            if (longUserInput <= 0) { // Negative numbers and zero
                 System.out.print("Please enter a valid number: ");
                 scan.nextLine();
                 continue;
