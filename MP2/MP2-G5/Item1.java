@@ -7,18 +7,18 @@ public class Item1 {
 
     System.out.print("Input Number: ");
     int intNumber = scanner.nextInt();
-    int addNumber = 0;
+    int intAddNumber = 0;
     scanner.close();
 
 
     for(int i = 1; i < intNumber; i++){
         if(intNumber % i == 0){
-            addNumber += i;
+            intAddNumber += i;
         }
     }
 
 
-    if(addNumber == intNumber){
+    if(intAddNumber == intNumber){
         System.out.println(intNumber + " is a perfect number.");
     }
     else 
