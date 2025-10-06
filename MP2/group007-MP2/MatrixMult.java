@@ -17,6 +17,8 @@ public class MatrixMult {
 
             if (LENGTH_Y_AXIS_ONE != LENGTH_X_AXIS_TWO) {
                 System.out.println("Matrix multiplication not possible! The Y length of the first matrix must equal the X length of the second matrix.");
+                lengthIn.close();
+                matrixIn.close();
                 return;
             }
 
@@ -56,7 +58,8 @@ public class MatrixMult {
                 }
                 System.out.println();
             }
-
+            matrixIn.close();
+            lengthIn.close();
         } catch (InputMismatchException e) {
             System.out.println("Invalid input! Please enter integers only.");
         } catch (Exception e) {

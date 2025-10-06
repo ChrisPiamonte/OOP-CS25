@@ -32,6 +32,7 @@ public class AnagramChecker {
             } else {
                 System.out.print("These two words are not an anagram.");
             }
+            input.close();
         } catch (InputMismatchException e) {
             System.out.println("Invalid input! Please enter valid words only.");
         } catch (Exception e) {
