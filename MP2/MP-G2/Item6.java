@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /* Machine Problem 2 Programming Concepts
  * Item 6
- * Ask the user to enter a numebr and display all of its prime factors.
+ * Ask the user to enter a number and display all of its prime factors.
  * For example, the prime factors of 84 are 2,2,3,7
  */
 
@@ -55,5 +55,6 @@ public class Item6 {
         return value;
     }
 }
+
 
 
