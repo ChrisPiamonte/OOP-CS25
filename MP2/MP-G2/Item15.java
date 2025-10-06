@@ -28,7 +28,7 @@ public class Item15 {
         
         for (int i = 0; i < intNum; i++) {
             if (blnVisited[i]) 
-            continue;
+                continue;
             
             int intCount = 1;
             for (int j = i + 1; j < intNum; j++) {
