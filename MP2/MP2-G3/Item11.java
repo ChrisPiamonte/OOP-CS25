@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Item11 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+
+        // Ensure non-empty input
+        String input = scan.nextLine().trim();
+        while (input.isEmpty()) {
+            System.out.println("Invalid input! Please enter a non-empty string.");
+            System.out.print("Enter a string: ");
+            input = scan.nextLine().trim();
+        }
+
+        input = input.toLowerCase();
+
+        int vowelCount = 0;
+        int consonantCount = 0;
+
+        for (int i = 0; i < input.length(); i++) {
+            char letter = input.charAt(i);
+            if (letter >= 'a' && letter <= 'z') {
+                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
+                    vowelCount++;
+                } else {
+                    consonantCount++;
+                }
+            }
+        }
+
+        System.out.println("Number of vowels: " + vowelCount);
+        System.out.println("Number of consonants: " + consonantCount);
+        scan.close();
+    }
+}
